@@ -1,0 +1,105 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import { Button } from 'symbiote-component-library';
+
+<Meta title="Components/Atoms/Buttons" component="Button" />
+
+# Buttons
+
+### When to use this component
+
+Use the Button component to help users carry out an action on a page like starting an application or moving to the next question in a form.
+
+Write Button text in sentence case, describing the action it performs. For example:
+
+- `Start now` at the start of process
+
+- `Log in` to an account the user has already created
+
+- `Send your application` to submit the user’s application form
+
+- `Pay` to make a payment
+
+- `Log out` when a user is logged into an account
+
+### When not to use this component
+
+The Button must never be used to draw attention to any other type of link, for example, an anchor link. They are only to be used for call to action.
+
+#### Snippet
+
+<button className="primary">Click Me!</button>
+
+```HTML
+<!-- HTML -->
+<button className="primary">Click Me!</button>
+
+<!-- React -->
+<Button type="primary">Click Me!</Button>
+```
+
+### Options
+
+The following options can be applied and combined within the Button component.
+
+- **Size** - large, medium (default), small, extra small. Use this to match the context, for example, a small button makes sense next to a paragrah.
+
+- **Hierarchy** - Primary, Secondary, Tertiary. Use this when more than one button is presented at the same time, for example, proceed should be 'Primary' and going back should be 'Secondary'
+
+- **Style** - Outline Light, Outline Dark, Call to action. This is purely stylistic and is recommended for use when another component should draw as much attention as possible for example,Buttons on full image card components.
+
+- **Status** - Disabled. This is important for indicating to user when they are not able to proceed for example, when completing a form and certain items have not been completed appropriately.
+
+### Size
+
+<button className="primary lg">Large button</button>
+<button className="primary md">Medium button</button>
+<button className="primary sm">Small button</button>
+<button className="primary xs">Extra small button</button>
+
+```HTML
+<!-- HTML -->
+<button className="primary lg">Large button</button>
+<button className="primary md">Medium button</button>
+<button className="primary sm">Small button</button>
+<button className="primary xs">Extra small button</button>
+
+<!-- React -->
+<Button type="primary" size="lg">Large button</Button>
+<Button type="primary" size="md">Medium button</Button>
+<Button type="primary" size="sm">Small button</Button>
+<Button type="primary" size="xs">Extra small button</Button>
+
+```
+
+### Hierarchy
+
+<button className="primary">Primary button</button>
+<button className="secondary">Secondary button</button>
+<button className="tertiary">Tertiary button</button>
+
+```HTML
+<button className="primary">Primary button</button>
+<button className="secondary">Secondary button</button>
+<button className="tertiary">Tertiary button</button>
+```
+
+### Style
+
+<button className="outline-light">Outline Line button</button>
+<button className="outline-dark">Outline Dark button</button>
+<button className="cta">Call to action button</button>
+
+```HTML
+<button className="outline-light">Outline Line button</button>
+<button className="outline-dark">Outline Dark button</button>
+<button className="cta">Call to action button</button>
+```
+
+### Status
+
+<button className="disabled">Disabled button</button>
+
+```HTML
+<button className="disabled">Disabled button</button>
+```
