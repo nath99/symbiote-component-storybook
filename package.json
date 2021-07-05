@@ -1,0 +1,24 @@
+{
+  "name": "symbiote-component-storybook",
+  "version": "1.0.0",
+  "description": "Storybook configuration for the Symbiote Component Library",
+  "main": "index.js",
+  "repository": "git@github.com:nath99/symbiote-component-storybook.git",
+  "author": "Nathan Barry <nathanb@symbiote.com.au>",
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "storybook:export": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.3.2",
+    "@types/react": "^17.0.13",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass-loader": "^12.1.0"
+  }
+}
