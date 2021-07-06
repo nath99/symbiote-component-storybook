@@ -1,4 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Card } from 'symbiote-component-library';
 
 <Meta title="Components/Content/Cards" />
 
@@ -10,34 +11,90 @@ The Card component is a stylised container useful for capturing attention and pr
 
 This component should be used to present a small snippet of information along with an optional image.
 
-### When not to use this component
-
-An individual Card component is typically a member of a collection of similar Cards and should not be used in isolation.
-
 ### Options
 
 The following options can be applied to the Card component.
 
 - **Image and text card (default)** - An image with space underneath for content
 
-- **Full image card** - A full imsge with white content overlayed.
+- **Full image card** - A full image with white content overlayed.
 
-- **Full image card with date** - A full imsge with white content overlayed as well as a date overlay.
+- **Full image card with date** - A full image with white content overlayed as well as a date overlay.
 
 - **Wide card** - A side by side layout of the Image and text card
 
 - **Text only card** - Useful for when no image is required.
 
-### Image and text card (default)
+### Examples
 
-### Full image card
+#### Image and text card (default)
 
-### Full image card with date
+#### Full image card
 
-### Wide card
+<Card
+    image="#"
+    fullImage={true}
+    wide={false}
+    date={new Date()}
+    topic="topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
 
-### Text only card
+#### Full image card with date
+
+#### Wide card
+
+#### Text only card
+
+### Snippets
+
+#### HTML
+
+```HTML
+div className="col-xs-12 col-sm-4">
+    <div className="card full-image-card">
+        <div className="card-wrapper" style={{
+            backgroundImage: `url(${cardImage1})`
+
+        }}>
+            {/* Optional date */}
+            <div className="date">
+                <span className="day">18</span>
+                <span className="month">Sep</span>
+                <span className="year">2020</span>
+            </div>
+            <div className="content">
+                <p className="inverted">Topic</p>
+                <h3 className="inverted">Mauris tortor turpis, dignissim vel ullam.</h3>
+                <p className="inverted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit.</p>
+                <div className="button-container">
+                    <button className="cta inverted">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+#### React
+
+```HTML
+<Card
+    image={#}
+    fullImage={true}
+    wide={false}
+    date={new Date()}
+    topic="topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
+```
 
 ### Showcase
 
-This component is best seen in context in this example here.
+This component is best seen in context in this example here (WIP).
