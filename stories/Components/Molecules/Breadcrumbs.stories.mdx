@@ -1,0 +1,66 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Breadcrumbs } from 'symbiote-component-library';
+
+<Meta title="Components/Molecules/Breadcrumbs" component={Breadcrumbs} />
+
+# Breadcrumbs
+
+The Breadcrumbs component displays the path to the current page relative to the starting point. It allows the user to easily see where they came from and offers them a link back.
+
+### When to use this component
+
+This component should only be used on pages other than the homepage such as on sub links from the homepage for example, clicking a Main Navigation component link from the homepage should take you to a page with a Breadcrumb component.
+
+### When not to use this component
+
+Do not use this component on the homepage as it will serve no purpose as no link path will be available.
+
+### Example
+
+<Breadcrumbs
+    breadcrumbs = {[
+        {breadcrumbLabel: "Sub-page", breadcrumbLink: "#"},
+        {breadcrumbLabel: "Rabbit hole", breadcrumbLink: "#"},
+        {breadcrumbLabel: "Lost?", breadcrumbLink: "#"}
+    ]}
+    >
+</Breadcrumbs>
+
+### Snippets
+
+#### HTML
+
+```HTML
+<div className="container-fluid breadcrumbs">
+    <div className="container">
+        <div className="row">
+            <div className="col-12">
+                <span className="">
+                    <a href="a" className="breadcrumb">
+                        <i className="las la-home xxs"></i>Home
+                    </a>
+                    <span className="breadcrumb__spacer"><i className="las la-angle-right xxs"></i></span>
+                    <a href="a" className="breadcrumb">Sub-page</a>
+                    <span className="breadcrumb__spacer"><i className="las la-angle-right xxs"></i></span>
+                    <a href="a" className="breadcrumb">Rabbit hole</a>
+                    <span className="breadcrumb__spacer"><i className="las la-angle-right xxs"></i></span>
+                    <span className="breadcrumb">Lost?</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+#### React
+
+```HTML
+<Breadcrumbs
+    breadcrumbs = {[
+        {breadcrumbLabel: "Sub-page", breadcrumbLink: "#"},
+        {breadcrumbLabel: "Rabbit hole", breadcrumbLink: "#"},
+        {breadcrumbLabel: "Lost?", breadcrumbLink: "#"}
+    ]}
+    >
+</Breadcrumbs>
+```
