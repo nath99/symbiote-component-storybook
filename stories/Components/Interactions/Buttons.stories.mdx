@@ -2,7 +2,7 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
 import { Button } from 'symbiote-component-library';
 
-<Meta title="Components/Atoms/Buttons" component="Button" />
+<Meta title="Components/Interactions/Buttons" component="Button" />
 
 # Buttons
 
@@ -86,7 +86,9 @@ The following options can be applied and combined within the Button component.
 
 ### Style
 
-<button className="outline-light">Outline Line button</button>
+<div className="button-outline-background" style={{backgroundColor: "#444444", display: "inline-block", padding: "1rem"}}>
+    <button className="outline-light">Outline Line button</button>
+</div>
 <button className="outline-dark">Outline Dark button</button>
 <button className="cta">Call to action button</button>
 
@@ -99,6 +101,8 @@ The following options can be applied and combined within the Button component.
 ### Status
 
 <button className="disabled">Disabled button</button>
+
+<Button size="lg" enabled={false}>Large disabled button</Button>
 
 ```HTML
 <button className="disabled">Disabled button</button>

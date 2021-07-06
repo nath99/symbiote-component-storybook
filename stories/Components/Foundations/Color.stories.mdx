@@ -1,0 +1,45 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Foundations/Color" />
+
+# Color
+
+Color contrast is an important aspect of accessibility. Good contrast makes it easier for people with visual impairments to read and discern content and helps in imperfect conditions like low-light environments or older screens. With this in mind, we designed our color palette to be as accessible as possible. Text and icon colors are reliably legible with contrast ratios that are in line with WCAG (Web Content Accessibility Guidelines) 2.1 AA values.
+
+### Palette
+
+After a lot of iterations and tests with real components and interfaces, we arrived at a palette of colors that achieved our goals: our colors predictably passed accessibility guidelines, kept their clear vibrant hues and maintained a consistent visual weight across hues.
+
+### Contrast
+
+Achieving the right contrast with color was challenging, especially because color is incredibly subjective and has a big effect on the aesthetics of a product. We wanted to create a color system with hand-picked, vibrant colors that also met standards for accessibility and contrast.
+
+Assuredly, our default colors for text and icons now pass the accessibility contrast thresholds defined in the WCAG 2.1 guidelines. You can read more about WCAG guidelines here.
+
+We created pairs of hues that have specifc roles, one of which achieves a contrast ratio of at least 4.5:1 when used with small text and one which achieves a contrast ratio of at least 3:1 for large text or iconography. For example, use small white text on the small version of cyan to achieve a contrast ratio of <= 4.5:1 or use a white icon with the large version of green to achieve a contrast ratio of >= 3:1.
+
+### For small text
+
+Red 4.63
+Orange 4.53
+Green 4.51
+Cyan 4.53
+Blue 4.55
+Purple 4.60
+Violet 4.56
+Gray 4.54
+
+### For large text and icons
+
+Red 3.71
+Orange 3.36
+Green 3.10
+Cyan 3.22
+Blue 3.47
+Purple 3.41
+Violet 3.29
+Gray 3.03
+
+### Conclusion
+
+Our color palette can be used right out fo the box but is built in such a way that overwriting specific hues is easily achievable through Sass variables. If you plan on changing the color plaette we recommend having a read of WCAG guidlines and using contrast as a guide to choosing colors that best serve all of your users as well as your brand.

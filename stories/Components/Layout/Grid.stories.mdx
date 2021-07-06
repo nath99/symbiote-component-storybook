@@ -1,0 +1,124 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Layout/Grid" />
+
+# Grid
+
+Our flexible grid is a mobile-first system that uses a series of containers, rows, and columns to lay out and align content. It is based upon the grid system from Bootstrap and as such follows the tried and true twelve-column layout. After reviewing many government websites it was clear that the grids from bootstrap are commonly used for responsive layouts and that our users are likely to already be familiar with using it.
+
+### Breakpoints
+
+Similar to Bootrap we use a series of breakpoints to ensure that users with every device have a curated user interface. Our breakpoints are as follows:
+
+- xs-breakpoint: 576px
+
+- sm-breakpoint: 768px
+
+- md-breakpoint: 992px
+
+- lg-breakpoint: 1366px
+
+These breakpoints are setup in the _settings.scss file and can be modified depending on your use case.
+
+### Structure
+
+Containers are used to contain, pad, and align the content within them.
+
+Rows are wrappers for columns. Columns have horizontal padding (gutter - default 30px) for controlling the space between them. This padding is counteracted in the rows with negative margins to ensure that the content in your columns are visually aligned down the left side.
+
+Columns dictate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use .col-4.
+
+### Visual example
+
+The below example illustrates the 12 column structure. Note: extra styling is applied to show the visual distiction between the columns and rows.
+
+```HTML
+<div className="container">
+    <div className="row">
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+    </div>
+    <div className="row">
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+    </div>
+    <div className="row">
+        <div className="col-4"><p className="inverted">4</p></div>
+        <div className="col-4"><p className="inverted">4</p></div>
+        <div className="col-4"><p className="inverted">4</p></div>
+    </div>
+    <div className="row">
+        <div className="col-6"><p className="inverted">6</p></div>
+        <div className="col-6"><p className="inverted">6</p></div>
+    </div>
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
+```
+
+### Column Options
+
+The following options can be applied to the columns
+
+- **Pull and push** - The visual order of columns within a row can be modified by setting 'pull' and 'push' classes on each column.
+- **Offset** - A column can offset by a specified number of columns by using the offset class name.
+
+### Pull and push
+
+```HTML
+<div className="container">
+    <div className="row">
+        <div className="col-4 col-xs-push-8"><p className="inverted">First, but visually last</p></div>
+        <div className="col-4 col-xs-pull-4"><p className="inverted">Second, but visually first</p></div>
+        <div className="col-4 col-xs-pull-4"><p className="inverted">Last, but visually second</p></div>
+    </div>
+</div>
+```
+
+### Offset
+
+```HTML
+<div className="container">
+    <div className="row">
+        <div className="col-6"><p className="inverted">6 wide and no offset</p></div>
+        <div className="col-3 col-xs-offset-2"><p className="inverted">3 wide and 2 offset</p></div>
+    </div>
+</div>
+```
+
+### Container Option
+
+The following option can be applied to the container
+
+- **Fluid** - Container can be the full width, spanning the entire width of your viewport.
+
+```HTML
+<div className="container-fluid">
+    <div className="row">
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+    </div>
+    <div className="row">
+        <div className="col-6"><p className="inverted">6</p></div>
+        <div className="col-6"><p className="inverted">6</p></div>
+    </div>
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
+```

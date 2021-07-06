@@ -1,0 +1,87 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Alerts/Notification" />
+
+# Notification
+
+The Notification component is used to relay important information or changes on a page to the user in a way that attracts their attention without interrupting their current task. They appear at the top of the page and are dismissable.
+
+### When to use this component
+
+This component should be used sparingly and only when the information is considered critial for the user.
+
+### When not to use this component
+
+Do not use this component to relay unimportant information such as form submission or for trivial/non-urgent information. Consider using a page alert component if the information being relayed is in regards to a recent interaction.
+
+### Positioning
+
+It is recommended to place the Notification component just below the Main Navigation component to ensure that it is read in the correct order by screen readers. This component will also dynamically re-position itself below any Breadcrumb components should they exist on a page.
+
+### Options
+
+The following options are available for this component
+
+- **Information** - This is the general purpose Notification component and should used for relaying information of a general nature, for example relaying information on an upcoming event or information regarding another area of the website.
+
+- **Success** - The success level of the Notification component is recommended for use when positive information needs to be relayed, for example, a new feature is now available or if a recent upgrade has been made that will improve the user experience.
+
+- **Warning** - This level of the Notification component should only be used for relaying semi-critical information for example, soon to be expected downtime or a currently disabled feature.
+
+- **Error** - This level of the Notification component is reserved only for critcal information and should be used sparingly.
+
+### Information
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.
+
+```HTML
+<div className="container-fluid notification information">
+    <i className="las la-info-circle"></i>
+    <div className="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <button className="button outline-light cta sm">Read More</button>
+</div>
+```
+
+### Success
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.
+
+```HTML
+<div className="container-fluid notification success">
+    <i className="las la-check-circle"></i>
+    <div className="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <button className="button outline-light cta sm">Read More</button>
+</div>
+```
+
+### Warning
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.
+
+```HTML
+<div className="container-fluid notification success">
+    <i className="las la-exclamation-circle"></i>
+    <div className="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <button className="button outline-light cta sm">Read More</button>
+</div>
+```
+
+### Error
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.
+
+```HTML
+<div className="container-fluid notification error">
+    <i className="las la-times-circle"></i>
+    <div className="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <button className="button outline-light cta sm">Read More</button>
+</div>
+```

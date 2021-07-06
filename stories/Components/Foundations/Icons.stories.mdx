@@ -1,0 +1,53 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Foundations/Icons" />
+
+# Icons
+
+We have used an open-source icon library from Icon8 called Line Awesome. It is an extensive, free and most importantly beautifully curated set of icons.
+
+Line awesome provides all the features of the popular Font Awesome font library but at no cost, while maintaing a 1:1 swap of all icons within the library. If you are familar with how to use Font Awesome then there is no learning curve when using the icons that we have packaged in this design system.
+
+### When to use this component
+
+Use icons for supplementary information that is related to the content surrounding it. For example, instead of using the word ‘Warning’ you may use Line Awesome's exclamation icon to quickly convey your point.
+
+### When not to use this component
+
+Do not use icons next to each other. It can cause confusion as icons draw attention and it is difficult to establish hiesrachy when multiple same sied icons are within the same proximity.
+
+### Examples
+
+### Options
+
+The following options can be applied and combined within the Icon component.
+
+- **Size** - Extra large, large, medium (default), small, extra small, extra extra small. Use this to match the context, for example, a small button makes sense next to a paragrah.
+
+- **Color** - Default, Inverted. Use this option when using an icon on a dark or light background in order to achieve the correct contrast
+
+### Size
+
+```HTML
+<i className="las la-biking xl"></i>
+<i className="las la-biking lg"></i>
+<i className="las la-biking"></i>
+<i className="las la-biking sm"></i>
+<i className="las la-biking xs"></i>
+<i className="las la-biking xxs"></i>
+```
+
+### Color
+
+```HTML
+<i className="las la-globe xl"></i>
+<i className="las la-wind xl"></i>
+<i className="las la-fire xl"></i>
+<i className="las la-globe inverted xl"></i>
+<i className="las la-wind inverted xl"></i>
+<i className="las la-fire inverted xl"></i>
+```
+
+### More Information
+
+For more information on the available set of icons, please visit [Icon8's Line Awesome page](https://icons8.com/line-awesome).

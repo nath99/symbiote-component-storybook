@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Content/Hero" />
+
+# Hero
+
+The Hero component is used to draw attention and to relay short and useful information to the user.
+
+### When to use this component
+
+This component can be used on any page but is recommended to be used as the first element within the content section of a page as it designed to draw attention.
+
+### When not to use this component
+
+Do not use this component as the last content element on page as it may not be viewed by users who choose not to scroll to the bottom of the page. This component should really be considered as a prominent feature of any page that uses it.
+
+### Options
+
+The following options can be applied to the Hero component.
+
+- **Size** - Full viewport width or contained width. The component can be positioned in either a fluid or regular container spaning either the full viewport width or be constrained to the width of a container.
+- **Content positioning** - Content is optional but can be positioned in the left, the centre or the right of the Hero component. Choosing to align either left or right along with placing the Hero component in a fluid container will cause the content to align with the content that is contained in a container.
+
+### Contained width
+
+(example here)
+
+```HTML
+<div className="hero">
+    <img className="hero-background" alt="Hero alt text" src={/your/image/path/image.jpg} />
+    <div className="col-xs-10 col-sm-8 col-lg-4 content">
+        <h3>Mauris tortor turpis, dignissim vel ullam.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit.</p>
+        <button className="cta">Read more</button>
+    </div>
+</div>
+```
+
+### Full width
+
+This is best displayed on its own page which can be viewed here.
+
+```HTML
+<div className="container-fluid">
+    <div className="hero">
+        <img className="hero-background" alt="Hero alt text"  src={/your/image/path/image.jpg} />
+        <div className="container hero-fluid right">
+            <div className="col-xs-12 col-sm-8 col-lg-4">
+                <div className="content">
+                    <h3>Mauris tortor turpis, dignissim vel ullam.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit.</p>
+                    <button className="cta">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```

@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Interactions/Toggle" />
+
+# Toggle
+
+Dark mode (Put example here)
+
+The Toggle component act as on/off switches. They prompt users to choose between two mutually exclusive options and always have a default value. Toggles should provide immediate results, giving users the freedom to control their preferences as needed.
+
+### When to use this component
+
+Toggle switches are best used for changing the state of system functionalities and preferences. Toggles may replace two radio buttons or a single checkbox to allow users to choose between two opposing states.
+
+### When not to use this component
+
+Do not use the Toggle component when the setting being toggled is ambiguous or has a level of complexity. Toggles should only be used for very simple and straight forward settings or decisions.
+
+### Snippet
+
+Show week day (another example here)
+
+```HTML
+<div className="toggle">
+    <p className="title">Show week day</p>
+    <label htmlFor="customToggle" className="toggle-label">
+        <input type="checkbox" className="toggle-input" id="customToggle" hidden />
+        <div className="toggle-group">
+            <span className="toggle-checked"></span>
+        </div>
+    </label>
+</div>
+```

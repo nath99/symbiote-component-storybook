@@ -1,0 +1,52 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Page Elements/Progress Bar" />
+
+# Progress Bar
+
+The progress Bar component is useful for helping users see their progress when completing multi-step forms. It indicates the number of pages in a journey as well as the completed steps as well as the current step.
+
+### When to use this component
+
+This component should only be used when a from has at least two distinct steps and an update occurs to the fields being completed.
+
+### When not to use this component
+
+This component should not be used for a single page form or for indicating any other progress.
+
+### Snippet
+
+(examples)
+
+Step one
+Step two
+Step three
+Step four
+Step five
+
+```HTML
+<div className="progress-bar">
+    <ol className="progress-steps">
+        <li className="progress-step">
+            <span className="count highlight-index"></span>
+            <span className="description">Step one</span>
+        </li>
+        <li className="progress-step">
+            <span className="count highlight-index"></span>
+            <span className="description">Step two</span>
+        </li>
+        <li className="progress-step">
+            <span className="count current"></span>
+            <span className="description">Step three</span>
+        </li>
+        <li className="progress-step">
+            <span className="count"></span>
+            <span className="description">Step four</span>
+        </li>
+        <li className="progress-step">
+            <span className="count"></span>
+            <span className="description">Step five</span>
+        </li>
+    </ol>
+</div>
+```

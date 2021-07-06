@@ -1,0 +1,72 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Interactions/Radio" />
+
+# Radio
+
+(examples)
+
+Beef
+
+Chicken
+
+Lamb
+
+Radio buttons display a set of mutually exclusive options from which a user must select exactly one.
+
+### When to use this component
+
+Radio buttons should be used when an option in a given option list is required and therefore an option should be selected by default.
+
+### When not to use this component
+
+Do not use Radio buttons when the list of options is not mutually exclusive. It should be clear to the user that selecting one option will anull the other options.
+
+### Snippet
+
+What is your favourite color?
+
+(examples)
+
+Red
+
+Blue
+
+Yellow
+
+Green
+
+```HTML
+<p>What is your favourite color?</p>
+
+<div className="radio">
+    <p className="title">Red</p>
+    <label htmlFor="radioRed" className="radio-label">
+        <div className="radio-group">
+            <input type="radio" className="radio-input" id="radioRed" name="radioColor" hidden />
+            <span className="radio-checked"></span>
+        </div>
+    </label>
+    <p className="title">Blue</p>
+    <label htmlFor="radioBlue" className="radio-label">
+        <div className="radio-group">
+            <input type="radio" className="radio-input" id="radioBlue" name="radioColor" hidden />
+            <span className="radio-checked"></span>
+        </div>
+    </label>
+    <p className="title">Yellow</p>
+    <label htmlFor="radioYellow" className="radio-label">
+        <div className="radio-group">
+            <input type="radio" className="radio-input" id="radioYellow" name="radioColor" hidden />
+            <span className="radio-checked"></span>
+        </div>
+    </label>
+    <p className="title">Green</p>
+    <label htmlFor="radioGreen" className="radio-label">
+        <div className="radio-group">
+            <input type="radio" className="radio-input" id="radioGreen" name="radioColor" hidden />
+            <span className="radio-checked"></span>
+        </div>
+    </label>
+</div>
+```

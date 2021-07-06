@@ -1,0 +1,70 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Content/List" />
+
+# List
+
+This component is useful for displaying either associated or unassociated lists of items. It is stylised in a way to help users visualise associations between list points if they exist.
+
+### When to use this component
+
+This component should be used to display points of data and should be kept short in order to reduce visual complexity.
+
+### When not to use this component
+
+Do not use this component to display large paragraphs of text.
+
+### Snippet
+
+The following are the two possible varieties of the List component which show the association on hover.
+
+### Ordered list
+
+1. First item
+2. Second item (Parent)
+  3. Third item (Child)
+  4. Fourth item (Child)
+  5. Fifth item (Child)
+6. Sixth item
+
+```HTML
+<ol className="styled-list">
+    <li>First item</li>
+    <li>Second item (Parent)
+        <ol>
+            <li>Third item (Child)</li>
+            <li>Fourth item (Child)</li>
+            <li>Fifth item (Child)</li>
+        </ol>
+    </li>
+    <li>Sixth item</li>
+</ol>
+```
+
+### Unordered list
+
+- First item
+
+- Second item (Parent)
+
+  - Third item (Child)
+
+  - Fourth item (Child)
+
+  - Fifth item (Child)
+
+- Sixth item
+
+```HTML
+<ul className="styled-list">
+    <li>First item</li>
+    <li>Second item (Parent)
+        <ul>
+            <li>Third item (Child)</li>
+            <li>Fourth item (Child)</li>
+            <li>Fifth item (Child)</li>
+        </ul>
+    </li>
+    <li>Sixth item</li>
+</ul>
+```

@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Interactions/Checkbox" />
+
+# Checkbox
+
+(Examples)
+
+Pickles
+
+Cheese
+
+Mayo
+
+Extra napkins
+
+Check boxes allow users to select one or more items
+
+### When to use this component
+
+Checkboxes are recomended to be used when there are lists of options and a user may select any number of choices, including zero, one, or several. In other words, each checkbox is independent of all other checkboxes in the list, so checking one box doesn't uncheck the others.
+
+### When not to use this component
+
+Do not use checkboxes when the label does not make both states — (turned on, and turned off) — clear to the user. If that is not possible, use a pair of radio button with two options instead. Then both states can have their own label.
+
+### Snippet
+
+I agree to the terms and conditions
+
+```HTML
+<div className="checkbox">
+    <p className="title">I agree to the terms and conditions</p>
+    <label htmlFor="terms" className="checkbox-label">
+        <div className="checkbox-group">
+            <input type="checkbox" className="checkbox-input" id="terms" hidden />
+            <span className="checkbox-checked"></span>
+        </div>
+    </label>
+</div>
+```

@@ -1,0 +1,137 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Components/Interactions/Inputs" />
+
+# Inputs
+
+Input components are are input fields typically used in forms that allow users to enter text in a structured format. All text inputs must have visible labels; placeholder text is not an acceptable replacement for a label as it vanishes when users start typing.
+
+Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.
+
+### Varieties
+
+The following examples are the possible varieties of text input. The below can be mixed together, for example, a textare can be required as well as being set to full width.
+
+### Default
+
+First Name
+
+```HTML
+<form>
+    <label htmlFor="firstName">First Name</label>
+    <input type="text" id="firstName" />
+</form>
+```
+
+### Required Input
+
+Last Name (required)
+
+```HTML
+<form>
+    <label htmlFor="lastname">Last Name (required)</label>
+    <input type="text" id="lastname" required/>
+</form>
+```
+
+### Textarea
+
+Optional extra message
+
+```HTML
+<form>
+    <label htmlFor="message">Optional extra message</label>
+    <textarea id="message" />
+</form>
+```
+
+### Valid and Invalid input
+
+First Name Last Name
+
+```HTML
+<form>
+    <label htmlFor="firstName">First Name</label>
+    <input type="text" id="firstName" className="valid" />
+
+    <label htmlFor="lastname">Last Name</label>
+    <input type="text" id="lastname" className="error" />
+</form>
+```
+
+### Disabled input
+
+Address
+
+```HTML
+<form>
+    <label htmlFor="address">Address</label>
+    <input type="text" id="address" disabled/>
+</form>
+```
+
+### Extra small input
+
+CVV
+
+```HTML
+<form>
+    <label htmlFor="postcode">Postcode</label>
+    <input type="text" id="postcode" className="xs" />
+</form>
+```
+
+### Small input
+
+Postcode
+
+```HTML
+<form>
+    <label htmlFor="postcode">Postcode</label>
+    <input type="text" id="postcode" className="sm" />
+</form>
+```
+
+### Medium input (Default)
+
+First Name
+
+```HTML
+<form>
+    <label htmlFor="firstname">First Name</label>
+    <input type="text" id="firstname" />
+</form>
+```
+
+### Large input
+
+Last Name
+
+```HTML
+<form>
+    <label htmlFor="lastname">Last Name</label>
+    <input type="text" id="lastname" className="lg" />
+</form>
+```
+
+### Extra large input
+
+Username
+
+```HTML
+<form>
+    <label htmlFor="username">Username</label>
+    <input type="text" id="username" className="xl" />
+</form>
+```
+
+### Full width input
+
+Address
+
+```HTML
+<form>
+    <label htmlFor="address">Address</label>
+    <input type="text" id="address" className="full-width" />
+</form>
+```
