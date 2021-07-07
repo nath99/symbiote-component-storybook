@@ -1,20 +1,62 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Checkbox } from 'symbiote-component-library';
 
-<Meta title="Components/Interactions/Checkbox" />
+<Meta title="Components/Interactions/Checkbox" component={Checkbox} />
 
 # Checkbox
 
-(Examples)
-
-Pickles
-
-Cheese
-
-Mayo
-
-Extra napkins
+<Checkbox checkboxLabel="Pickles"></Checkbox>
+<Checkbox checkboxLabel="Cheese"></Checkbox>
+<Checkbox checkboxLabel="Mayo"></Checkbox>
+<Checkbox checkboxLabel="Extra napkins"></Checkbox>
 
 Check boxes allow users to select one or more items
+
+```HTML
+// HTML
+<div className="checkbox">
+    <p className="title">Pickles</p>
+    <label htmlFor="pickles" className="checkbox-label">
+        <div className="checkbox-group">
+            <input type="checkbox" className="checkbox-input" id="pickles" hidden />
+            <span className="checkbox-checked"></span>
+        </div>
+    </label>
+</div>
+<div className="checkbox">
+    <p className="title">Cheese</p>
+    <label htmlFor="cheese" className="checkbox-label">
+        <div className="checkbox-group">
+            <input type="checkbox" className="checkbox-input" id="cheese" hidden />
+            <span className="checkbox-checked"></span>
+        </div>
+    </label>
+</div>
+<div className="checkbox">
+    <p className="title">Mayo</p>
+    <label htmlFor="mayo" className="checkbox-label">
+        <div className="checkbox-group">
+            <input type="checkbox" className="checkbox-input" id="mayo" hidden />
+            <span className="checkbox-checked"></span>
+        </div>
+    </label>
+</div>
+<div className="checkbox">
+    <p className="title">Extra napkins</p>
+    <label htmlFor="extraNapkins" className="checkbox-label">
+        <div className="checkbox-group">
+            <input type="checkbox" className="checkbox-input" id="extraNapkins" hidden />
+            <span className="checkbox-checked"></span>
+        </div>
+    </label>
+</div>
+
+// React
+<Checkbox checkboxLabel="Pickles"></Checkbox>
+<Checkbox checkboxLabel="Cheese"></Checkbox>
+<Checkbox checkboxLabel="Mayo"></Checkbox>
+<Checkbox checkboxLabel="Extra napkins"></Checkbox>
+```
 
 ### When to use this component
 
@@ -26,7 +68,7 @@ Do not use checkboxes when the label does not make both states — (turned on, a
 
 ### Snippet
 
-I agree to the terms and conditions
+<Checkbox checkboxLabel="I agree to the terms and conditions"></Checkbox>
 
 ```HTML
 <div className="checkbox">
