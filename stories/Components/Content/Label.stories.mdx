@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Label } from 'symbiote-component-library';
 
-<Meta title="Components/Content/Label" />
+<Meta title="Components/Content/Label" component={Label} />
 
 # Label
 
@@ -16,12 +17,24 @@ If the event that has occured requires more text than a single word consider usi
 
 ### Snippet
 
-Success Warning Error New Info (examples)
+<Label labelText="Success" labelStatus="success" />
+<Label labelText="Warning" labelStatus="warning" />
+<Label labelText="Error" labelStatus="error" />
+<Label labelText="New" labelStatus="new" />
+<Label labelText="Info" labelStatus="info" />
 
 ```HTML
+// HTML
 <span className="label label-success">Success</span>
 <span className="label label-warning">Warning</span>
 <span className="label label-error">Error</span>
 <span className="label label-new">New</span>
 <span className="label label-info">Info</span>
+
+// React
+<Label labelText="Success" labelStatus="success" />
+<Label labelText="Warning" labelStatus="warning" />
+<Label labelText="Error" labelStatus="error" />
+<Label labelText="New" labelStatus="new" />
+<Label labelText="Info" labelStatus="info" />
 ```
