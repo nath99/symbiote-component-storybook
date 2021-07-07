@@ -29,14 +29,24 @@ The following options can be applied to the Card component.
 
 #### Image and text card (default)
 
+<Card
+    image="https://source.unsplash.com/collection/1922729"
+    fullImage={false}
+    wide={false}
+    topic="Topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
+
 #### Full image card
 
 <Card
-    image="#"
+    image="https://source.unsplash.com/collection/573009"
     fullImage={true}
     wide={false}
-    date={new Date()}
-    topic="topic"
+    topic="Topic"
     heading="Mauris tortor turpis, dignissim vel ullam."
     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
     callToActionText="Read more"
@@ -45,16 +55,46 @@ The following options can be applied to the Card component.
 
 #### Full image card with date
 
+<Card
+    image="https://source.unsplash.com/collection/827743"
+    fullImage={true}
+    wide={false}
+    date={new Date()}
+    topic="Topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
+
 #### Wide card
 
+<Card
+    image="https://source.unsplash.com/collection/220381"
+    wide={true}
+    topic="Topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
+
 #### Text only card
+
+<Card
+    topic="Topic"
+    heading="Mauris tortor turpis, dignissim vel ullam."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    callToActionText="Read more"
+    callToActionLink="#"
+></Card>
 
 ### Snippets
 
 #### HTML
 
 ```HTML
-div className="col-xs-12 col-sm-4">
+<div className="col-xs-12 col-sm-4">
     <div className="card full-image-card">
         <div className="card-wrapper" style={{
             backgroundImage: `url(${cardImage1})`
