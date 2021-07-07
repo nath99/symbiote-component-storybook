@@ -15,39 +15,39 @@ Check boxes allow users to select one or more items
 ```HTML
 // HTML
 <div className="checkbox">
-    <p className="title">Pickles</p>
     <label htmlFor="pickles" className="checkbox-label">
         <div className="checkbox-group">
             <input type="checkbox" className="checkbox-input" id="pickles" hidden />
             <span className="checkbox-checked"></span>
         </div>
+        <p className="title">Pickles</p>
     </label>
 </div>
 <div className="checkbox">
-    <p className="title">Cheese</p>
     <label htmlFor="cheese" className="checkbox-label">
         <div className="checkbox-group">
             <input type="checkbox" className="checkbox-input" id="cheese" hidden />
             <span className="checkbox-checked"></span>
         </div>
+        <p className="title">Cheese</p>
     </label>
 </div>
 <div className="checkbox">
-    <p className="title">Mayo</p>
     <label htmlFor="mayo" className="checkbox-label">
         <div className="checkbox-group">
             <input type="checkbox" className="checkbox-input" id="mayo" hidden />
             <span className="checkbox-checked"></span>
         </div>
+        <p className="title">Mayo</p>
     </label>
 </div>
 <div className="checkbox">
-    <p className="title">Extra napkins</p>
     <label htmlFor="extraNapkins" className="checkbox-label">
         <div className="checkbox-group">
             <input type="checkbox" className="checkbox-input" id="extraNapkins" hidden />
             <span className="checkbox-checked"></span>
         </div>
+        <p className="title">Extra napkins</p>
     </label>
 </div>
 
@@ -71,13 +71,17 @@ Do not use checkboxes when the label does not make both states — (turned on, a
 <Checkbox checkboxLabel="I agree to the terms and conditions"></Checkbox>
 
 ```HTML
+// HTML
 <div className="checkbox">
-    <p className="title">I agree to the terms and conditions</p>
     <label htmlFor="terms" className="checkbox-label">
         <div className="checkbox-group">
             <input type="checkbox" className="checkbox-input" id="terms" hidden />
             <span className="checkbox-checked"></span>
         </div>
+        <p className="title">I agree to the terms and conditions</p>
     </label>
 </div>
+
+// React
+<Checkbox checkboxLabel="I agree to the terms and conditions"></Checkbox>
 ```
