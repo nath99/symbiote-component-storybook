@@ -17,7 +17,6 @@ This component should not be used for a single page form or for indicating any o
 
 ### Snippet
 
-(examples)
 <ProgressBar progressSteps={[
     {label: 'Step one', complete: true},
     {label: 'Step two', complete: true},
@@ -27,6 +26,7 @@ This component should not be used for a single page form or for indicating any o
 ]} />
 
 ```HTML
+// HTML
 <div className="progress-bar">
     <ol className="progress-steps">
         <li className="progress-step">
@@ -51,4 +51,13 @@ This component should not be used for a single page form or for indicating any o
         </li>
     </ol>
 </div>
+
+// React
+<ProgressBar progressSteps={[
+    {label: 'Step one', complete: true},
+    {label: 'Step two', complete: true},
+    {label: 'Step three', complete: false},
+    {label: 'Step four', complete: false},
+    {label: 'Step five', complete: false}
+]} />
 ```
