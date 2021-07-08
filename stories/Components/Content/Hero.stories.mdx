@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Hero } from 'symbiote-component-library';
 
-<Meta title="Components/Content/Hero" />
+<Meta title="Components/Content/Hero" component={Hero} />
 
 # Hero
 
@@ -23,7 +24,12 @@ The following options can be applied to the Hero component.
 
 ### Contained width
 
-(example here)
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+></Hero>
 
 ```HTML
 <div className="hero">
@@ -38,7 +44,13 @@ The following options can be applied to the Hero component.
 
 ### Full width
 
-This is best displayed on its own page which can be viewed here.
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    size="full"
+></Hero>
 
 ```HTML
 <div className="container-fluid">
@@ -55,4 +67,66 @@ This is best displayed on its own page which can be viewed here.
         </div>
     </div>
 </div>
+```
+
+### Positioning
+
+#### Left (default)
+
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="left"
+></Hero>
+
+```HTML
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="left"
+></Hero>
+```
+
+#### Center
+
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="center"
+></Hero>
+
+```HTML
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="center"
+></Hero>
+```
+
+#### Right 
+
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="right"
+></Hero>
+
+```HTML
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    contentPosition="right"
+></Hero>
 ```
