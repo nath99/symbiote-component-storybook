@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { ProgressBar } from 'symbiote-component-library';
 
-<Meta title="Components/Page Elements/Progress Bar" />
+<Meta title="Components/Page Elements/Progress Bar" component={ProgressBar} />
 
 # Progress Bar
 
@@ -17,12 +18,13 @@ This component should not be used for a single page form or for indicating any o
 ### Snippet
 
 (examples)
-
-Step one
-Step two
-Step three
-Step four
-Step five
+<ProgressBar progressSteps={[
+    {label: 'Step one', complete: true},
+    {label: 'Step two', complete: true},
+    {label: 'Step three', complete: false},
+    {label: 'Step four', complete: false},
+    {label: 'Step five', complete: false}
+]} />
 
 ```HTML
 <div className="progress-bar">
