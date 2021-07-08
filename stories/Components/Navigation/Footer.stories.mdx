@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Footer } from 'symbiote-component-library';
 
-<Meta title="Components/Navigation/Footer" />
+<Meta title="Components/Navigation/Footer" component={Footer} />
 
 # Footer
 
@@ -14,61 +15,236 @@ This component should be used whenever the Main Navigation component is used. It
 
 Do not use more than one Footer on a page and ensure that it is the list item in your document to ensure it is correctly read as the last item by screen readers.
 
-### Snippet
+### Example
 
+<Footer
+    footerLists = {
+        [
+            {
+                heading: "Menu 1",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                ]
+            },
+            {
+                heading: "Menu 2",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 4",
+                        footerLink: "#"
+                    }
+                ]
+            },
+            {
+                heading: "Menu 3",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 4",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 5",
+                        footerLink: "#"
+                    }
+                ]
+            }
+        ]
+    }
+    socialLinks = {
+        {
+            heading: "Social",
+            facebook: "#",
+            twitter: "#",
+            instagram: "#",
+            linkedIn: "#"
+        }
+    }
+    copyright = {
+        {
+            name: "Symbiote",
+            link: "#"
+        }
+    }
+></Footer>
+
+### Snippets
+
+#### HTML
 ```HTML
 <div className="container-fluid footer-container">
     <footer>
         <div className="container">
             <div className="col-xs-6 col-md-3">
-                <p>Company</p>
+                <p>Menu 1</p>
                 <ul>
-                    <li><a href="###">About</a></li>
-                    <li><a href="###">Mission</a></li>
-                    <li><a href="###">Services</a></li>
-                    <li><a href="###">Our Partners</a></li>
-                    <li><a href="###">Get in touch</a></li>
+                    <li><a href="#">label 1</a></li>
+                    <li><a href="#">label 2</a></li>
+                    <li><a href="#">label 3</a></li>
                 </ul>
             </div>
             <div className="col-xs-6 col-md-3">
-                <p>Products</p>
+                <p>Menu 2</p>
                 <ul>
-                    <li><a href="###">About</a></li>
-                    <li><a href="###">Mission</a></li>
-                    <li><a href="###">Services</a></li>
-                    <li><a href="###">Our Partners</a></li>
-                    <li><a href="###">Get in touch</a></li>
+                    <li><a href="#">label 1</a></li>
+                    <li><a href="#">label 2</a></li>
+                    <li><a href="#">label 3</a></li>
+                    <li><a href="#">label 4</a></li>
                 </ul>
             </div>
             <div className="col-xs-6 col-md-3">
-                <p>Accounts</p>
+                <p>Menu 3</p>
                 <ul>
-                    <li><a href="###">About</a></li>
-                    <li><a href="###">Mission</a></li>
-                    <li><a href="###">Services</a></li>
-                    <li><a href="###">Our Partners</a></li>
-                    <li><a href="###">Get in touch</a></li>
+                    <li><a href="#">label 1</a></li>
+                    <li><a href="#">label 2</a></li>
+                    <li><a href="#">label 3</a></li>
+                    <li><a href="#">label 4</a></li>
+                    <li><a href="#">label 5</a></li>
                 </ul>
             </div>
             <div className="col-xs-6 col-md-3">
                 <p>Social</p>
                 <div className="social-link">
-                    <a href="###" target="_blank"><i className="lab la-facebook inverted"></i><p>Facebook</p></a>
+                    <a href="#" target="_blank"><i className="lab la-facebook inverted"></i><p>Facebook</p></a>
                 </div>
                 <div className="social-link">
-                    <a href="###" target="_blank"><i className="lab la-twitter inverted"></i><p>Twitter</p></a>
+                    <a href="#" target="_blank"><i className="lab la-twitter inverted"></i><p>Twitter</p></a>
                 </div>
                 <div className="social-link">
-                    <a href="###" target="_blank"><i className="lab la-instagram inverted"></i><p>Instagram</p></a>
+                    <a href="#" target="_blank"><i className="lab la-instagram inverted"></i><p>Instagram</p></a>
                 </div>
                 <div className="social-link">
-                    <a href="###" target="_blank"><i className="lab la-linkedin-in inverted"></i><p>LinkedIn</p></a>
+                    <a href="#" target="_blank"><i className="lab la-linkedin-in inverted"></i><p>LinkedIn</p></a>
                 </div>
             </div>
         </div>
     </footer>
     <div className="copyright">
-        <p>Copyright &#169; <a href="www.symbiote.com.au" target="_blank">Symbiote</a> Pty Ltd {new Date().getFullYear().toString()}</p>
+        <p>Copyright &#169; <a href="www.symbiote.com.au" target="_blank">Symbiote</a> {new Date().getFullYear().toString()}</p>
     </div>
 </div>
 ```
+
+#### React
+```HTML
+<Footer
+    footerLists = {
+        [
+            {
+                heading: "Menu 1",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                ]
+            },
+            {
+                heading: "Menu 2",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 4",
+                        footerLink: "#"
+                    }
+                ]
+            },
+            {
+                heading: "Menu 3",
+                footerLinks: [
+                    {
+                        footerlabel: "label 1",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 2",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 3",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 4",
+                        footerLink: "#"
+                    },
+                    {
+                        footerlabel: "label 5",
+                        footerLink: "#"
+                    }
+                ]
+            }
+        ]
+    }
+    socialLinks = {
+        {
+            heading: "Social",
+            facebook: "#",
+            twitter: "#",
+            instagram: "#",
+            linkedIn: "#"
+        }
+    }
+    copyright = {
+        {
+            name: "Symbiote Pty Ltd",
+            link: "#",
+        }
+    }
+}
+></Footer>
+```
+
