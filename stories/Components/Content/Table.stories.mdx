@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Table } from 'symbiote-component-library';
 
-<Meta title="Components/Content/Table" />
+<Meta title="Components/Content/Table" component={Table} />
 
 # Table
 
@@ -16,7 +17,21 @@ Do not use this component when the data being rendered can more simplt displayed
 
 ### Snippet
 
+<Table tableContent={{
+    tableHeader: ['First Name', 'Last Name', 'Phone', 'Email', 'Date of Birth'],
+    tableBody: [{
+        rowCols: ['Notorius', 'Big', '(03) 9999 9999', '<a href="mailto:x@x.com">thenotoriousbig@badboyrecords.com</a>', '21/05/1972']
+    }, {
+        rowCols: ['Grandmaster', 'Flash', '(02) 8888 8888', '<a href="mailto:x@x.com">gmasterflash@sugarhillrecords.com</a>', '01/01/1958']
+    }, {
+        rowCols: ['Puff', 'Daddy', '(04) 7777 7777', '<a href="mailto:x@x.com">pdiddy@uptownrecords.com</a>', '04/11/1969']
+    }, {
+        rowCols: ['Tupac', 'Shakur', '(02) 8888 8888', '<a href="mailto:x@x.com">tupac@drowrecords.com</a>', '16/06/1971']
+    }]
+}}></Table>
+
 ```HTML
+// HTML
 <table>
     <thead>
         <tr>
@@ -59,4 +74,18 @@ Do not use this component when the data being rendered can more simplt displayed
         </tr>
     </tbody>
 </table>
+
+// React
+<Table tableContent={{
+    tableHeader: ['First Name', 'Last Name', 'Phone', 'Email', 'Date of Birth'],
+    tableBody: [{
+        rowCols: ['Notorius', 'Big', '(03) 9999 9999', '<a href="mailto:x@x.com">thenotoriousbig@badboyrecords.com</a>', '21/05/1972']
+    }, {
+        rowCols: ['Grandmaster', 'Flash', '(02) 8888 8888', '<a href="mailto:x@x.com">gmasterflash@sugarhillrecords.com</a>', '01/01/1958']
+    }, {
+        rowCols: ['Puff', 'Daddy', '(04) 7777 7777', '<a href="mailto:x@x.com">pdiddy@uptownrecords.com</a>', '04/11/1969']
+    }, {
+        rowCols: ['Tupac', 'Shakur', '(02) 8888 8888', '<a href="mailto:x@x.com">tupac@drowrecords.com</a>', '16/06/1971']
+    }]
+}}></Table>
 ```

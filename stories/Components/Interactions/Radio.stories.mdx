@@ -1,16 +1,23 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Radio } from 'symbiote-component-library';
 
-<Meta title="Components/Interactions/Radio" />
+<Meta title="Components/Interactions/Radio" component={Radio} />
 
 # Radio
 
-(examples)
+<Radio radioItems={[
+    {radioLabel: 'Beef', checked: true},
+    {radioLabel: 'Chicken'},
+    {radioLabel: 'Lamb'}
+]} ></Radio>
 
-Beef
-
-Chicken
-
-Lamb
+```HTML
+<Radio radioItems={[
+    {radioLabel: 'Beef', checked: true},
+    {radioLabel: 'Chicken'},
+    {radioLabel: 'Lamb'}
+]} ></Radio>
+```
 
 Radio buttons display a set of mutually exclusive options from which a user must select exactly one.
 
@@ -26,19 +33,17 @@ Do not use Radio buttons when the list of options is not mutually exclusive. It 
 
 What is your favourite color?
 
-(examples)
-
-Red
-
-Blue
-
-Yellow
-
-Green
+<Radio radioItems={[
+    {radioLabel: 'Red', checked: true},
+    {radioLabel: 'Blue'},
+    {radioLabel: 'Yellow'},
+    {radioLabel: 'Green'}
+]} ></Radio>
 
 ```HTML
 <p>What is your favourite color?</p>
 
+// HTML
 <div className="radio">
     <p className="title">Red</p>
     <label htmlFor="radioRed" className="radio-label">
@@ -69,4 +74,12 @@ Green
         </div>
     </label>
 </div>
+
+// React
+<Radio radioItems={[
+    {radioLabel: 'Red', checked: true},
+    {radioLabel: 'Blue'},
+    {radioLabel: 'Yellow'},
+    {radioLabel: 'Green'}
+]} ></Radio>
 ```

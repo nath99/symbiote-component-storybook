@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { List } from 'symbiote-component-library';
 
-<Meta title="Components/Content/List" />
+<Meta title="Components/Content/List" component={List} />
 
 # List
 
@@ -20,14 +21,18 @@ The following are the two possible varieties of the List component which show th
 
 ### Ordered list
 
-1. First item
-2. Second item (Parent)
-  3. Third item (Child)
-  4. Fourth item (Child)
-  5. Fifth item (Child)
-6. Sixth item
+<List ordered={true} listContent={[
+    {itemText: 'First item'},
+    {itemText: 'Second item (Parent)', children: [
+        {itemText: 'Third item (Child)'},
+        {itemText: 'Fourth item (Child)'},
+        {itemText: 'Fifth item (Child)'}
+    ]},
+    {itemText: 'Sixth item'}
+]}></List>
 
 ```HTML
+// HTML
 <ol className="styled-list">
     <li>First item</li>
     <li>Second item (Parent)
@@ -39,23 +44,33 @@ The following are the two possible varieties of the List component which show th
     </li>
     <li>Sixth item</li>
 </ol>
+
+// React
+<List ordered={true} listContent={[
+    {itemText: 'First item'},
+    {itemText: 'Second item (Parent)', children: [
+        {itemText: 'Third item (Child)'},
+        {itemText: 'Fourth item (Child)'},
+        {itemText: 'Fifth item (Child)'}
+    ]},
+    {itemText: 'Sixth item'}
+]}></List>
 ```
 
 ### Unordered list
 
-- First item
-
-- Second item (Parent)
-
-  - Third item (Child)
-
-  - Fourth item (Child)
-
-  - Fifth item (Child)
-
-- Sixth item
+<List listContent={[
+    {itemText: 'First item'},
+    {itemText: 'Second item (Parent)', children: [
+        {itemText: 'Third item (Child)'},
+        {itemText: 'Fourth item (Child)'},
+        {itemText: 'Fifth item (Child)'}
+    ]},
+    {itemText: 'Sixth item'}
+]}></List>
 
 ```HTML
+// HTML
 <ul className="styled-list">
     <li>First item</li>
     <li>Second item (Parent)
@@ -67,4 +82,15 @@ The following are the two possible varieties of the List component which show th
     </li>
     <li>Sixth item</li>
 </ul>
+
+// React
+<List listContent={[
+    {itemText: 'First item'},
+    {itemText: 'Second item (Parent)', children: [
+        {itemText: 'Third item (Child)'},
+        {itemText: 'Fourth item (Child)'},
+        {itemText: 'Fifth item (Child)'}
+    ]},
+    {itemText: 'Sixth item'}
+]}></List>
 ```

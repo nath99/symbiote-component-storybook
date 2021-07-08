@@ -1,10 +1,15 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Toggle } from 'symbiote-component-library';
 
-<Meta title="Components/Interactions/Toggle" />
+<Meta title="Components/Interactions/Toggle" component={Toggle} />
 
 # Toggle
 
-Dark mode (Put example here)
+<Toggle toggleLabel="Dark mode" />
+
+```HTML
+<Toggle toggleLabel="Dark mode" />
+```
 
 The Toggle component act as on/off switches. They prompt users to choose between two mutually exclusive options and always have a default value. Toggles should provide immediate results, giving users the freedom to control their preferences as needed.
 
@@ -18,9 +23,10 @@ Do not use the Toggle component when the setting being toggled is ambiguous or h
 
 ### Snippet
 
-Show week day (another example here)
+<Toggle toggleLabel="Show week day" />
 
 ```HTML
+//HTML
 <div className="toggle">
     <p className="title">Show week day</p>
     <label htmlFor="customToggle" className="toggle-label">
@@ -30,4 +36,7 @@ Show week day (another example here)
         </div>
     </label>
 </div>
+
+// React
+<Toggle toggleLabel="Dark mode" />
 ```

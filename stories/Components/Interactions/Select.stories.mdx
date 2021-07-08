@@ -1,10 +1,27 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Select } from 'symbiote-component-library';
 
-<Meta title="Components/Interactions/Select" />
+<Meta title="Components/Interactions/Select" component={Select} />
 
 # Select
 
-What is your favourite letter of the alphabet? (example)
+<Select selectLabel="What is your favourite letter of the alphabet?" selectItems={[
+    {label: "A"}, {label: "B"}, {label: "C"}, {label: "D"}, {label: "E"}, {label: "F"},
+    {label: "G"}, {label: "H"}, {label: "I"}, {label: "J"}, {label: "K"}, {label: "L"},
+    {label: "M"}, {label: "N"}, {label: "O"}, {label: "P"}, {label: "Q"}, {label: "R"},
+    {label: "S"}, {label: "T"}, {label: "U"}, {label: "V"}, {label: "W"}, {label: "X"},
+    {label: "Y"}, {label: "Z"}
+]}></Select>
+
+```HTML
+<Select selectLabel="What is your favourite letter of the alphabet?" selectItems={[
+    {label: "A"}, {label: "B"}, {label: "C"}, {label: "D"}, {label: "E"}, {label: "F"},
+    {label: "G"}, {label: "H"}, {label: "I"}, {label: "J"}, {label: "K"}, {label: "L"},
+    {label: "M"}, {label: "N"}, {label: "O"}, {label: "P"}, {label: "Q"}, {label: "R"},
+    {label: "S"}, {label: "T"}, {label: "U"}, {label: "V"}, {label: "W"}, {label: "X"},
+    {label: "Y"}, {label: "Z"}
+]}></Select>
+```
 
 The Select component allows users to choose an option from a long list.
 
@@ -18,7 +35,21 @@ It is not recommended to use this component when only a short list of options ar
 
 ### Snippet
 
-Please select your shipping option
+<Select selectLabel="Please select your shipping option" selectItems={[
+    {label: "AirMail"},
+    {label: "AirMail Standard"},
+    {label: "Ground Shipping"},
+    {label: "Expedited"},
+    {label: "Registered Ground"},
+    {label: "Express"},
+    {label: "Express Registered"},
+    {label: "Snail Mail"},
+    {label: "Courier"},
+    {label: "Courier Express"},
+    {label: "Registered Courier"},
+    {label: "Pick-up"},
+    {label: "After hours pick-up"}
+]}></Select>
 
 ```HTML
 <form>
@@ -39,4 +70,21 @@ Please select your shipping option
         <option value="">After hours Pick-up</option>
     </select>
 </form>
+
+// React
+<Select selectLabel="Please select your shipping option" selectItems={[
+    {label: "AirMail"},
+    {label: "AirMail Standard"},
+    {label: "Ground Shipping"},
+    {label: "Expedited"},
+    {label: "Registered Ground"},
+    {label: "Express"},
+    {label: "Express Registered"},
+    {label: "Snail Mail"},
+    {label: "Courier"},
+    {label: "Courier Express"},
+    {label: "Registered Courier"},
+    {label: "Pick-up"},
+    {label: "After hours pick-up"}
+]}></Select>
 ```
