@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Tooltip } from 'symbiote-component-library';
 
-<Meta title="Components/Content/Tooltip" />
+<Meta title="Components/Content/Tooltip" component={Tooltip} />
 
 # Tooltip
 
@@ -16,12 +17,15 @@ Do not use this component for common UI elements that do not require any further
 
 ### Snippet
 
-Hover over me (example)
-Hey, I'm a tooltip!
+<Tooltip label="Hover over me" tooltip="Hey, I'm a tooltip!" />
 
 ```HTML
+// HTML
 <div className="tooltip">
     <p>Hover over me</p>
     <span className="tooltip-text">Hey, I'm a tooltip!</span>
 </div>
+
+// React
+<Tooltip label="Hover over me" tooltip="Hey, I'm a tooltip!" />
 ```
