@@ -4,6 +4,10 @@ import { Button } from 'symbiote-component-library';
 
 <Meta title="Components/Interactions/Buttons" component="Button" />
 
+export const Template = ({text, ...args}) => {
+    return <Button {...args}>{text}</Button>
+}
+
 # Buttons
 
 ### When to use this component
@@ -28,15 +32,38 @@ The Button must never be used to draw attention to any other type of link, for e
 
 #### Snippet
 
-<button className="primary">Click Me!</button>
-
-```HTML
-<!-- HTML -->
-<button className="primary">Click Me!</button>
-
-<!-- React -->
-<Button type="primary">Click Me!</Button>
-```
+<Canvas>
+    <Story 
+        name="Buttons"
+        argTypes={{
+            type: {
+                options: ['primary', 'secondary', 'tertiary'],
+                control: { type: 'select' }
+            },
+            size: {
+                options: ['lg', 'md', 'sm', 'xs'],
+                control: { type: 'select' }
+            },
+            style: {
+                options: ['none', 'outline-light', 'outline-dark', 'cta'],
+                control: 'select'
+            },
+            enabled: {
+                type: { name: 'boolean', required: false },
+                defaultValue: true,
+                control: 'boolean'
+            }
+        }}
+        args={{
+            text: 'Button',
+            type: 'primary',
+            size: 'md',
+            enabled: true
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
 
 ### Options
 
@@ -52,58 +79,54 @@ The following options can be applied and combined within the Button component.
 
 ### Size
 
-<button className="primary lg">Large button</button>
-<button className="primary md">Medium button</button>
-<button className="primary sm">Small button</button>
-<button className="primary xs">Extra small button</button>
+<Button type="primary" size="lg">Large Button</Button>
+<Button type="primary" size="md">Medium Button</Button>
+<Button type="primary" size="sm">Small Button</Button>
+<Button type="primary" size="xs">Extra Small Button</Button>
 
 ```HTML
-<!-- HTML -->
-<button className="primary lg">Large button</button>
-<button className="primary md">Medium button</button>
-<button className="primary sm">Small button</button>
-<button className="primary xs">Extra small button</button>
-
-<!-- React -->
-<Button type="primary" size="lg">Large button</Button>
-<Button type="primary" size="md">Medium button</Button>
-<Button type="primary" size="sm">Small button</Button>
-<Button type="primary" size="xs">Extra small button</Button>
-
+React
+<Button type="primary" size="lg">Large Button</Button>
+<Button type="primary" size="md">Medium Button</Button>
+<Button type="primary" size="sm">Small Button</Button>
+<Button type="primary" size="xs">Extra Small Button</Button>
 ```
 
 ### Hierarchy
 
-<button className="primary">Primary button</button>
-<button className="secondary">Secondary button</button>
-<button className="tertiary">Tertiary button</button>
+<Button type="primary">Primary</Button>
+<Button type="secondary">Secondary</Button>
+<Button type="tertiary">Tertiary</Button>
 
 ```HTML
-<button className="primary">Primary button</button>
-<button className="secondary">Secondary button</button>
-<button className="tertiary">Tertiary button</button>
+React
+<Button type="primary">Primary</Button>
+<Button type="secondary">Secondary</Button>
+<Button type="tertiary">Tertiary</Button>
 ```
 
 ### Style
 
 <div className="button-outline-background" style={{backgroundColor: "#444444", display: "inline-block", padding: "1rem"}}>
-    <button className="outline-light">Outline Line button</button>
+    <Button style="outline-light">Outline Light button</Button>
 </div>
-<button className="outline-dark">Outline Dark button</button>
-<button className="cta">Call to action button</button>
+<Button style="outline-dark">Outline Dark button</Button>
+<Button style="cta">Call to action button</Button>
 
 ```HTML
-<button className="outline-light">Outline Line button</button>
-<button className="outline-dark">Outline Dark button</button>
-<button className="cta">Call to action button</button>
+React
+<div className="button-outline-background" style={{backgroundColor: "#444444", display: "inline-block", padding: "1rem"}}>
+    <Button style="outline-light">Outline Light button</Button>
+</div>
+<Button style="outline-dark">Outline Dark button</Button>
+<Button style="cta">Call to action button</Button>
 ```
 
 ### Status
 
-<button className="disabled">Disabled button</button>
-
-<Button size="lg" enabled={false}>Large disabled button</Button>
+<Button enabled={false}>Disabled button</Button>
 
 ```HTML
-<button className="disabled">Disabled button</button>
+React
+<Button enabled={false}>Disabled button</Button>
 ```
