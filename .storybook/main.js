@@ -4,7 +4,7 @@ module.exports = {
   stories: ["../stories/**/*.stories.@(tsx|mdx)"],
 
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
-  addons: ['@storybook/addon-essentials', '@storybook/addon-docs', '@storybook/addon-a11y'],
+  addons: ['@storybook/addon-essentials', '@storybook/preset-scss', '@storybook/addon-docs', '@storybook/addon-a11y'],
 
   scripts: {
     "start-storybook": "start-storybook -s ../public -p 9001"

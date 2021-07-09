@@ -1,5 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
+import 'symbiote-component-library/src/styles/GridDemo.scss';
+
 <Meta title="Components/Layout/Grid" />
 
 # Grid
@@ -31,6 +33,41 @@ Columns dictate the number of columns you’d like to use out of the possible 12
 ### Visual example
 
 The below example illustrates the 12 column structure. Note: extra styling is applied to show the visual distiction between the columns and rows.
+
+<div className="container grid-demo">
+    <div className="row">
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+        <div className="col-1"><p className="inverted">1</p></div>
+    </div>
+    <div className="row">
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+    </div>
+    <div className="row">
+        <div className="col-4"><p className="inverted">4</p></div>
+        <div className="col-4"><p className="inverted">4</p></div>
+        <div className="col-4"><p className="inverted">4</p></div>
+    </div>
+    <div className="row">
+        <div className="col-6"><p className="inverted">6</p></div>
+        <div className="col-6"><p className="inverted">6</p></div>
+    </div>
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
 
 ```HTML
 <div className="container">
@@ -78,6 +115,14 @@ The following options can be applied to the columns
 
 ### Pull and push
 
+<div className="container grid-demo">
+    <div className="row">
+        <div className="col-4 col-xs-push-8"><p className="inverted">First, but visually last</p></div>
+        <div className="col-4 col-xs-pull-4"><p className="inverted">Second, but visually first</p></div>
+        <div className="col-4 col-xs-pull-4"><p className="inverted">Last, but visually second</p></div>
+    </div>
+</div>
+
 ```HTML
 <div className="container">
     <div className="row">
@@ -89,6 +134,13 @@ The following options can be applied to the columns
 ```
 
 ### Offset
+
+<div className="container grid-demo">
+    <div className="row">
+        <div className="col-6"><p className="inverted">6 wide and no offset</p></div>
+        <div className="col-3 col-xs-offset-2"><p className="inverted">3 wide and 2 offset</p></div>
+    </div>
+</div>
 
 ```HTML
 <div className="container">
@@ -104,6 +156,22 @@ The following options can be applied to the columns
 The following option can be applied to the container
 
 - **Fluid** - Container can be the full width, spanning the entire width of your viewport.
+
+<div className="container-fluid grid-demo">
+    <div className="row">
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+        <div className="col-3"><p className="inverted">3</p></div>
+    </div>
+    <div className="row">
+        <div className="col-6"><p className="inverted">6</p></div>
+        <div className="col-6"><p className="inverted">6</p></div>
+    </div>
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
 
 ```HTML
 <div className="container-fluid">

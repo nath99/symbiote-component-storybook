@@ -1,5 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
+import 'symbiote-component-library/src/styles/ColorsDemo.scss';
+
 <Meta title="Components/Foundations/Color" />
 
 # Color
@@ -7,6 +9,30 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 Color contrast is an important aspect of accessibility. Good contrast makes it easier for people with visual impairments to read and discern content and helps in imperfect conditions like low-light environments or older screens. With this in mind, we designed our color palette to be as accessible as possible. Text and icon colors are reliably legible with contrast ratios that are in line with WCAG (Web Content Accessibility Guidelines) 2.1 AA values.
 
 ### Palette
+
+<div className="color-palette">
+    <div className="color red-1"></div>
+    <div className="color red-2"></div>
+    <div className="color orange-1"></div>
+    <div className="color orange-2"></div>
+    <div className="color green-1"></div>
+    <div className="color green-2"></div>
+    <div className="color cyan-1"></div>
+    <div className="color cyan-2"></div>
+    <div className="color blue-1"></div>
+    <div className="color blue-2"></div>
+    <div className="color purple-1"></div>
+    <div className="color purple-2"></div>
+    <div className="color violet-1"></div>
+    <div className="color violet-2"></div>
+    <div className="color black"></div>
+    <div className="color gray-1"></div>
+    <div className="color gray-2"></div>
+    <div className="color gray-3"></div>
+    <div className="color gray-4"></div>
+    <div className="color gray-5"></div>
+    <div className="color gray-6"></div>
+</div>
 
 After a lot of iterations and tests with real components and interfaces, we arrived at a palette of colors that achieved our goals: our colors predictably passed accessibility guidelines, kept their clear vibrant hues and maintained a consistent visual weight across hues.
 
@@ -20,25 +46,33 @@ We created pairs of hues that have specifc roles, one of which achieves a contra
 
 ### For small text
 
-Red 4.63
-Orange 4.53
-Green 4.51
-Cyan 4.53
-Blue 4.55
-Purple 4.60
-Violet 4.56
-Gray 4.54
+<div className="color-typography">
+    <div className="small-colors">
+        <h3 className="red-small">Red <b>4.63</b></h3>
+        <h3 className="orange-small">Orange <b>4.53</b></h3>
+        <h3 className="green-small">Green <b>4.51</b></h3>
+        <h3 className="cyan-small">Cyan <b>4.53</b></h3>
+        <h3 className="blue-small">Blue <b>4.55</b></h3>
+        <h3 className="purple-small">Purple <b>4.60</b></h3>
+        <h3 className="violet-small">Violet <b>4.56</b></h3>
+        <h3 className="gray-small">Gray <b>4.54</b></h3>
+    </div>
+</div>
 
 ### For large text and icons
 
-Red 3.71
-Orange 3.36
-Green 3.10
-Cyan 3.22
-Blue 3.47
-Purple 3.41
-Violet 3.29
-Gray 3.03
+<div className="color-typography">
+    <div className="large-colors">
+        <h3 className="red-large">Red <b>3.71</b></h3>
+        <h3 className="orange-large">Orange <b>3.36</b></h3>
+        <h3 className="green-large">Green <b>3.10</b></h3>
+        <h3 className="cyan-large">Cyan <b>3.22</b></h3>
+        <h3 className="blue-large">Blue <b>3.47</b></h3>
+        <h3 className="purple-large">Purple <b>3.41</b></h3>
+        <h3 className="violet-large">Violet <b>3.29</b></h3>
+        <h3 className="gray-large">Gray <b>3.03</b></h3>
+    </div>
+</div>
 
 ### Conclusion
 
