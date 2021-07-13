@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Pagination } from 'symbiote-component-library';
 
-<Meta title="Components/Page Elements/Pagination" />
+<Meta title="Components/Page Elements/Pagination" component={Pagination} />
 
 # Pagination
 
@@ -16,9 +17,39 @@ Do not use this component if there is only one page of content.
 
 ### Snippet
 
-(example)
+<Pagination
+    currentPage={4}
+    pages={[
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'}
+    ]} />
 
 ```HTML
+// React
+<Pagination
+    currentPage={4}
+    pages={[
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'}
+    ]} />
+
+// HTML
 <ul className="pagination" role="menubar" aria-label="Pages">
     <li className="previous">
         <button>
