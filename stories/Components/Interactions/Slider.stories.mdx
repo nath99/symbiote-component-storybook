@@ -1,7 +1,65 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Slider } from 'symbiote-component-library';
 
-<Meta title="Components/Interactions/Slider" />
+<Meta title="Components/Interactions/Slider" component={Slider} />
+
+export const Template = ({...args}) => {
+    return <Slider {...args} />
+}
 
 # Slider
 
-TBD
+<Canvas>
+    <Story
+        name="Slider"
+        argTypes={{
+            min: {
+                type: { name: 'number' }
+            },
+            max: {
+                type: { name: 'number' }
+            },
+            value: {
+                type: { name: 'number' }
+            }
+        }}
+        args={{
+            min: 0,
+            max: 100,
+            value: 10
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+```React
+<Slider min={0} max={100} value={10} />
+```
+
+The slider element lets you select a number within a defined range.
+
+### When to use this component
+
+This component should be used to allow a user to select a number from a known range of numbers.
+
+### When not to use this component
+
+It is not recommended to use this component when
+
+### Snippet
+
+Negative values
+
+<Slider min={-50} max={-1} value={-25} />
+
+```React
+<Slider min={-50} max={0} value={-25} />
+```
+
+Negative min positive max default 0
+<Slider min={-100} max={100} value={0} />
+
+```React
+<Slider min={-100} max={100} value={0} />
+```
