@@ -13,7 +13,8 @@ import { Select } from 'symbiote-component-library';
     {label: "Y"}, {label: "Z"}
 ]}></Select>
 
-```HTML
+#### React
+```jsx
 <Select selectLabel="What is your favourite letter of the alphabet?" selectItems={[
     {label: "A"}, {label: "B"}, {label: "C"}, {label: "D"}, {label: "E"}, {label: "F"},
     {label: "G"}, {label: "H"}, {label: "I"}, {label: "J"}, {label: "K"}, {label: "L"},
@@ -51,7 +52,8 @@ It is not recommended to use this component when only a short list of options ar
     {label: "After hours pick-up"}
 ]}></Select>
 
-```HTML
+#### HTML
+```html
 <form>
     <label htmlFor="shipping">Please select your shipping option</label>
     <select name="shipping">
@@ -70,8 +72,10 @@ It is not recommended to use this component when only a short list of options ar
         <option value="">After hours Pick-up</option>
     </select>
 </form>
+```
 
-// React
+#### React
+```jsx
 <Select selectLabel="Please select your shipping option" selectItems={[
     {label: "AirMail"},
     {label: "AirMail Standard"},

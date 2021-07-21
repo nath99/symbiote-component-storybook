@@ -11,7 +11,8 @@ import { Radio } from 'symbiote-component-library';
     {radioLabel: 'Lamb'}
 ]} ></Radio>
 
-```HTML
+#### React
+```jsx
 <Radio radioItems={[
     {radioLabel: 'Beef', checked: true},
     {radioLabel: 'Chicken'},
@@ -40,10 +41,10 @@ What is your favourite color?
     {radioLabel: 'Green'}
 ]} ></Radio>
 
-```HTML
+#### HTML
+```html
 <p>What is your favourite color?</p>
 
-// HTML
 <div className="radio">
     <p className="title">Red</p>
     <label htmlFor="radioRed" className="radio-label">
@@ -74,8 +75,12 @@ What is your favourite color?
         </div>
     </label>
 </div>
+```
 
-// React
+#### React
+```jsx
+<p>What is your favourite color?</p>
+
 <Radio radioItems={[
     {radioLabel: 'Red', checked: true},
     {radioLabel: 'Blue'},

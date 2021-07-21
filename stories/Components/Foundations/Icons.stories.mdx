@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Icon } from 'symbiote-component-library';
 
-<Meta title="Components/Foundations/Icons" />
+<Meta title="Components/Foundations/Icons" component={Icon} />
 
 # Icons
 
@@ -18,6 +19,13 @@ Do not use icons next to each other. It can cause confusion as icons draw attent
 
 ### Examples
 
+<Icon icon="biking" size="xl" />
+<Icon icon="biking" size="lg" />
+<Icon icon="biking" />
+<Icon icon="biking" size="sm" />
+<Icon icon="biking" size="xs" />
+<Icon icon="biking" size="xxs" />
+
 ### Options
 
 The following options can be applied and combined within the Icon component.
@@ -28,7 +36,8 @@ The following options can be applied and combined within the Icon component.
 
 ### Size
 
-```HTML
+HTML
+```html
 <i className="las la-biking xl"></i>
 <i className="las la-biking lg"></i>
 <i className="las la-biking"></i>
@@ -37,15 +46,49 @@ The following options can be applied and combined within the Icon component.
 <i className="las la-biking xxs"></i>
 ```
 
+React
+```jsx
+<Icon icon="biking" size="xl" />
+<Icon icon="biking" size="lg" />
+<Icon icon="biking" />
+<Icon icon="biking" size="sm" />
+<Icon icon="biking" size="xs" />
+<Icon icon="biking" size="xxs" />
+```
+
 ### Color
 
-```HTML
+<Icon icon="globe" size="xl" />
+<Icon icon="wind" size="xl" />
+<Icon icon="fire" size="xl" />
+
+<div className="icon-inverted-background" style={{backgroundColor: "#444444", display: "inline-block", padding: "1rem"}}>
+    <Icon icon="globe" color="inverted" size="xl" />
+    <Icon icon="wind" color="inverted" size="xl" />
+    <Icon icon="fire" color="inverted" size="xl" />
+</div>
+
+HTML
+```html
 <i className="las la-globe xl"></i>
 <i className="las la-wind xl"></i>
 <i className="las la-fire xl"></i>
 <i className="las la-globe inverted xl"></i>
 <i className="las la-wind inverted xl"></i>
 <i className="las la-fire inverted xl"></i>
+```
+
+React
+```jsx
+<Icon icon="globe" size="xl" />
+<Icon icon="wind" size="xl" />
+<Icon icon="fire" size="xl" />
+
+<div className="icon-inverted-background" style={{backgroundColor: "#444444", display: "inline-block", padding: "1rem"}}>
+    <Icon icon="globe" color="inverted" size="xl" />
+    <Icon icon="wind" color="inverted" size="xl" />
+    <Icon icon="fire" color="inverted" size="xl" />
+</div>
 ```
 
 ### More Information

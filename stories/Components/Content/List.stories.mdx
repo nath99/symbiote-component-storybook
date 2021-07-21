@@ -31,8 +31,8 @@ The following are the two possible varieties of the List component which show th
     {itemText: 'Sixth item'}
 ]}></List>
 
-```HTML
-// HTML
+#### HTML
+```html
 <ol className="styled-list">
     <li>First item</li>
     <li>Second item (Parent)
@@ -44,8 +44,10 @@ The following are the two possible varieties of the List component which show th
     </li>
     <li>Sixth item</li>
 </ol>
+```
 
-// React
+#### React
+```jsx
 <List ordered={true} listContent={[
     {itemText: 'First item'},
     {itemText: 'Second item (Parent)', children: [
@@ -69,8 +71,8 @@ The following are the two possible varieties of the List component which show th
     {itemText: 'Sixth item'}
 ]}></List>
 
-```HTML
-// HTML
+#### HTML
+```html
 <ul className="styled-list">
     <li>First item</li>
     <li>Second item (Parent)
@@ -82,8 +84,10 @@ The following are the two possible varieties of the List component which show th
     </li>
     <li>Sixth item</li>
 </ul>
+```
 
-// React
+#### React
+```jsx
 <List listContent={[
     {itemText: 'First item'},
     {itemText: 'Second item (Parent)', children: [

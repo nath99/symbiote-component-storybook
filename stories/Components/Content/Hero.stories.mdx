@@ -31,7 +31,8 @@ The following options can be applied to the Hero component.
     callToAction={{link: '#', text: 'Read more'}}
 ></Hero>
 
-```HTML
+#### HTML
+```html
 <div className="hero">
     <img className="hero-background" alt="Hero alt text" src={/your/image/path/image.jpg} />
     <div className="col-xs-10 col-sm-8 col-lg-4 content">
@@ -40,6 +41,16 @@ The following options can be applied to the Hero component.
         <button className="cta">Read more</button>
     </div>
 </div>
+```
+
+#### React
+```jsx
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+></Hero>
 ```
 
 ### Full width
@@ -52,7 +63,8 @@ The following options can be applied to the Hero component.
     size="full"
 ></Hero>
 
-```HTML
+#### HTML
+```html
 <div className="container-fluid">
     <div className="hero">
         <img className="hero-background" alt="Hero alt text"  src={/your/image/path/image.jpg} />
@@ -69,6 +81,17 @@ The following options can be applied to the Hero component.
 </div>
 ```
 
+#### React
+```jsx
+<Hero
+    title="Mauris tortor turpis, dignissim vel ullam."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
+    image={{src: 'https://source.unsplash.com/collection/827743', alt: 'Hero alt text'}}
+    callToAction={{link: '#', text: 'Read more'}}
+    size="full"
+></Hero>
+```
+
 ### Positioning
 
 #### Left (default)
@@ -81,7 +104,8 @@ The following options can be applied to the Hero component.
     contentPosition="left"
 ></Hero>
 
-```HTML
+#### React
+```jsx
 <Hero
     title="Mauris tortor turpis, dignissim vel ullam."
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
@@ -101,7 +125,8 @@ The following options can be applied to the Hero component.
     contentPosition="center"
 ></Hero>
 
-```HTML
+### React
+```jsx
 <Hero
     title="Mauris tortor turpis, dignissim vel ullam."
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."
@@ -111,7 +136,7 @@ The following options can be applied to the Hero component.
 ></Hero>
 ```
 
-#### Right 
+#### Right
 
 <Hero
     title="Mauris tortor turpis, dignissim vel ullam."
@@ -121,7 +146,8 @@ The following options can be applied to the Hero component.
     contentPosition="right"
 ></Hero>
 
-```HTML
+#### React
+```jsx
 <Hero
     title="Mauris tortor turpis, dignissim vel ullam."
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in facilisis diam. Aenean tincidunt erat at nulla sagittis ultrices. Suspendisse id molestie velit."

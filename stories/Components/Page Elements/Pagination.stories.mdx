@@ -32,24 +32,8 @@ Do not use this component if there is only one page of content.
         {link: '#'}
     ]} />
 
-```HTML
-// React
-<Pagination
-    currentPage={4}
-    pages={[
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'},
-        {link: '#'}
-    ]} />
-
-// HTML
+#### HTML
+```html
 <ul className="pagination" role="menubar" aria-label="Pages">
     <li className="previous">
         <button>
@@ -76,4 +60,22 @@ Do not use this component if there is only one page of content.
         </button>
     </li>
 </ul>
+```
+
+#### React
+```jsx
+<Pagination
+    currentPage={4}
+    pages={[
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'},
+        {link: '#'}
+    ]} />
 ```
