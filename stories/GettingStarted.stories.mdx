@@ -4,4 +4,27 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
 # Getting started
 
-Getting started guide here.
+Getting started is easy, the Symbiote Design System is hosted on [npm](https://www.npmjs.com/package/@symbiotetech/symbiote-component-library). Simply install it as a dependency using either
+```jsx
+yarn add @symbiotetech/symbiote-component-library
+npm install @symbiotetech/symbiote-component-library
+```
+
+Once installed all you have to do is import a component from the Symbiote Component Library like so.
+
+```jsx
+import { Button } from '@symbiotetech/symbiote-component-library'
+```
+
+To use an imported component, simply supply it with the appropriate props.
+
+```jsx
+<Button
+    type="primary"
+    size="md">
+    Click me
+</Button>
+```
+
+
+The Symbiote Design System is fully open source and is available on [GitHub](https://github.com/symbiote/symbiote-component-library). Feel free to fork this project.

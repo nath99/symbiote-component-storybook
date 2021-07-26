@@ -1,4 +1,3 @@
-
 export const parameters = {
     options: {
       storySort: {
@@ -15,5 +14,5 @@ export const parameters = {
           ],
         ],
       },
-    },
+    }
   };

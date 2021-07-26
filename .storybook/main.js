@@ -6,10 +6,6 @@ module.exports = {
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: ['@storybook/addon-essentials', '@storybook/preset-scss', '@storybook/addon-docs', '@storybook/addon-a11y'],
 
-  scripts: {
-    "start-storybook": "start-storybook -s ../public -p 9001"
-  },
-
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
