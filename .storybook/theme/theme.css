@@ -4,9 +4,7 @@ body {
 
 div[role="main"] .os-host {
 	background: #5d3895 !important;
-
 }
-
 
 .sidebar-container {
 	background: #333333 !important;
@@ -16,6 +14,10 @@ div[role="main"] .os-host {
 	color: #ffffff !important;
 }
 
+.sidebar-item svg {
+	color: #60ed90 !important;
+}
+
 .sidebar-item[data-selected="true"] {
 	color: #5d3895 !important;
     background: #60ed90 !important;
@@ -23,4 +25,8 @@ div[role="main"] .os-host {
 
 .sidebar-item[data-selected="true"] svg {
     color: #5d3895 !important;
+}
+
+#light, #dark {
+	color: #ffffff !important;
 }
