@@ -1,0 +1,26 @@
+body {
+	background: #333333 !important;
+}
+
+div[role="main"] .os-host {
+	background: #5d3895 !important;
+
+}
+
+
+.sidebar-container {
+	background: #333333 !important;
+}
+
+.sidebar-item {
+	color: #ffffff !important;
+}
+
+.sidebar-item[data-selected="true"] {
+	color: #5d3895 !important;
+    background: #60ed90 !important;
+}
+
+.sidebar-item[data-selected="true"] svg {
+    color: #5d3895 !important;
+}
