@@ -1,7 +1,7 @@
-@import 'symbiote-component-library/src/styles/variables/colors';
-@import 'symbiote-component-library/src/styles/variables/settings';
-@import 'symbiote-component-library/src/styles/variables/mixins';
-@import 'symbiote-component-library/src/styles/core/grid';
+@import '@symbiotetech/symbiote-component-library/src/styles/variables/colors';
+@import '@symbiotetech/symbiote-component-library/src/styles/variables/settings';
+@import '@symbiotetech/symbiote-component-library/src/styles/variables/mixins';
+@import '@symbiotetech/symbiote-component-library/src/styles/core/grid';
 
 .grid-demo {
     border: 1px solid $gray-aa-small;
