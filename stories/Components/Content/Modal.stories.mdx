@@ -1,0 +1,82 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Modal } from '@symbiotetech/symbiote-component-library';
+
+<Meta title="Components/Content/Modal" component={Modal}/>
+
+# Modal
+
+The Modal component is used when an interaction is required by the web page. It used to display some sort of interactive item such as a button or a link - with the user required to action an item. It uses the styling of the Card component in order to reduce the overhead of designing new interfaces.
+
+### When to use this component
+
+This component should be used when an imperitive option is required by the user. It should also be used sparingly as it modals can be difficult to navigate for users using accessability aids.
+
+### When not to use this component
+
+Do not use this component for non-imperitive actions or trivial actions. Do not use this component to display messages or text with no interactive content.
+
+### Options
+
+The following optional items can be supplied to the Modal component.
+
+- **Modal Style** - Full image, Side by side, Top to bottom or No image
+- **Image** - An image for display within the modal
+- **Alt text** - Alt text to supply accessability information for the supplied image
+- **Heading** - Heading text for display within the modal
+- **Body** - Body text for display within the modal
+- **Call to action link** - A link to another page/sub-page
+- **Call to action text** - The text that should be displayed for the call to action
+- **Close modal callback function** - A reference to a function within the parent container which controls the visibility of the modal, this should ultimately be a function which toggles a parent state which is passed down as the visibility prop to the modal
+- **Visibility** - The visiblity state of the modal
+
+### Examples
+<Modal
+    modalStyle="full-image"
+    image="https://source.unsplash.com/collection/329906/1320x400"
+    altText="Alt text"
+    heading="This is the heading text that is displayed within the modal"
+    body="This is the body text that is displayed within the modal"
+    callToActionLink="https://www.symbiote.com.au"
+    callToActionText="Read More"
+    closeModalCallBack={() => {}}
+    visible={true}
+></Modal>
+
+### Snippets
+
+#### HTML
+```html
+<div class="modal-cover">
+    <div class="modal" role="dialog" aria-labelledby="modal-heading" aria-describedby="modal-body" aria-modal="true">
+        <button class="close-modal">
+            <i class="las la-times sm inverted"></i>
+        </button>
+        <div class="modal-content full-image">
+            <div class="modal-content-wrapper" role="img" aria-label="Alt text" style="background-image: url("https://source.unsplash.com/collection/329906/1320x400");">
+                <div class="content">
+                    <h3 id="modal-heading" class="inverted">This is the heading text that is displayed within the modal</h3>
+                    <p id="modal-body" class="inverted">This is the body text that is displayed within the modal</p>
+                    <div class="button-container">
+                        <a class="button cta inverted" href="https://www.symbiote.com.au">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+#### React
+```jsx
+<Modal
+    modalStyle="full-image"
+    image="https://source.unsplash.com/collection/329906/1320x400"
+    altText="Alt text"
+    heading="This is the heading text that is displayed within the modal"
+    body="This is the body text that is displayed within the modal"
+    callToActionLink="https://www.symbiote.com.au"
+    callToActionText="Read More"
+    closeModalCallBack={() => {}}
+    visible={true}
+></Modal>
+```
+

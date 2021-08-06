@@ -9,7 +9,7 @@ export const parameters = {
             'Navigation', ['Main Navigation', 'Side Navigation', 'Breadcrumbs', 'Footer'],
             'Interactions', ['Buttons', 'Toggle', 'Checkbox', 'Inputs', 'Radio', 'Select', 'Slider'],
             'Alerts', ['Notification', 'Page alert'],
-            'Content', ['Hero', 'Table', 'List', 'Accordion', 'Cards', 'Tooltip', 'Label', 'Carousel'],
+            'Content', ['Hero', 'Table', 'List', 'Accordion', 'Cards', 'Tooltip', 'Label', 'Carousel', 'Modal'],
             'Page Elements', ['Progress bar', 'Pagination']
           ],
         ],
