@@ -1,0 +1,173 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Carousel } from '@symbiotetech/symbiote-component-library';
+
+<Meta title="Components/Content/Carousel" component={Carousel}/>
+
+# Carousel
+
+The Carousel component is a list of content that is displayed one by one, it allows a user to browse left and right in order to view the images or content. They add visual interest and reduce clutter. Users can scroll through each image by swiping on mobile devices or clicking the left-right arrows on desktop. It also has the feature of pausing the animation in order to reduce visual motion for certain users who prefer to reduce this.
+
+### When to use this component
+
+The Carousel component should be used sparingly as its overuse can lead to content not being clicked on or skipped entirely by users.
+
+### When not to use this component
+
+Do not use the Carousel component when there is two or fewer items to display. It is recommended for useful content and should not be used to display vital information.
+
+### Options
+
+The following optional items can be supplied to the Carousel component.
+
+- **Image** - An image for display in a slide
+- **Alt text** - Alt text to supply accessability information for the supplied image
+- **Caption heading** - Heading text for display in a slide with or without an image
+- **Caption body** - Body text for display in a slide with or without an image
+- **Interval** - The duration for all slides
+
+### Examples
+
+<Carousel
+    interval={5000}
+    slides={
+        [
+            {
+                image: "https://source.unsplash.com/collection/1922729/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the first slide"
+            },
+            {
+                image: "https://source.unsplash.com/collection/573009/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the second slide"
+            },
+            {
+                image: "https://source.unsplash.com/collection/329906/1320x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the third slide"
+            },
+			{
+                image: "https://source.unsplash.com/collection/827743/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the fourth slide"
+            },
+			{
+                image: "https://source.unsplash.com/collection/220381/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the fifth slide"
+            }
+        ]
+    }
+></Carousel>
+
+### Snippets
+
+#### HTML
+```html
+<div class="carousel">
+    <ul>
+        <li class="carousel-slide visible">
+            <img src="https://source.unsplash.com/collection/1922729/1350x400" alt="Alt text">
+            <div class="carousel-caption">
+                <h5 class="inverted">Caption Heading</h5>
+                <p class="inverted">This is the caption body for the first slide.</p>
+            </div>
+        </li>
+        <li class="carousel-slide ">
+            <img src="https://source.unsplash.com/collection/573009/1350x400" alt="Alt text">
+            <div class="carousel-caption">
+                <h5 class="inverted">Caption Heading</h5>
+                <p class="inverted">This is the caption body for the second slide.</p>
+            </div>
+        </li>
+        <li class="carousel-slide ">
+            <img src="https://source.unsplash.com/collection/329906/1320x400" alt="Alt text">
+            <div class="carousel-caption">
+                <h5 class="inverted">Caption Heading</h5>
+                <p class="inverted">This is the caption body for the third slide.</p>
+            </div>
+        </li>
+        <li class="carousel-slide ">
+            <img src="https://source.unsplash.com/collection/827743/1350x400" alt="Alt text">
+            <div class="carousel-caption">
+                <h5 class="inverted">Caption Heading</h5>
+                <p class="inverted">This is the caption body for the fourth slide.</p>
+            </div>
+        </li>
+        <li class="carousel-slide ">
+            <img src="https://source.unsplash.com/collection/220381/1350x400" alt="Alt text">
+            <div class="carousel-caption">
+                <h5 class="inverted">Caption Heading</h5>
+                <p class="inverted">This is the caption body for the fifth slide.</p>
+            </div>
+        </li>
+    </ul>
+    <div class="controls">
+        <button class="previous-slide">
+            <i class="las la-arrow-circle-left sm inverted"></i>
+            <span class="sr-only">Previous slide</span>
+        </button>
+        <button class="play-pause">
+            <i class="las sm inverted la-play-circle"></i>
+            <span class="sr-only">Pause</span>
+        </button>
+        <button class="next-slide">
+            <i class="las la-arrow-circle-right sm inverted"></i>
+            <span class="sr-only">Next slide</span>
+        </button>
+    </div>
+    <div class="carousel-dots-container">
+        <button class="carousel-dot active"></button>
+        <button class="carousel-dot "></button>
+        <button class="carousel-dot "></button>
+        <button class="carousel-dot "></button>
+        <button class="carousel-dot "></button>
+    </div>
+</div>
+```
+#### React
+```jsx
+<Carousel
+    interval={5000}
+    slides={
+        [
+            {
+                image: "https://source.unsplash.com/collection/1922729/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the first slide"
+            },
+            {
+                image: "https://source.unsplash.com/collection/573009/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the second slide"
+            },
+            {
+                image: "https://source.unsplash.com/collection/329906/1320x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the third slide"
+            },
+			{
+                image: "https://source.unsplash.com/collection/827743/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the fourth slide"
+            },
+			{
+                image: "https://source.unsplash.com/collection/220381/1350x400",
+                altText: "Alt text",
+                captionHeading: "Caption Heading",
+				captionBody: "This is the caption body for the fifth slide"
+            }
+        ]
+    }
+></Carousel>
+```
+
