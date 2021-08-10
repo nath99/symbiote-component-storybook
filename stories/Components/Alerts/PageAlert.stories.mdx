@@ -1,8 +1,35 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
-<Meta title="Components/Alerts/Page Alert" />
+import { PageAlert } from '@symbiotetech/symbiote-component-library';
+
+<Meta title="Components/Alerts/Page Alert" component={PageAlert} />
+
+export const Template = ({text, ...args}) => {
+    return <PageAlert {...args} />
+}
+
+<Canvas>
+    <Story
+        name="Page Alerts"
+        argTypes={{
+            status: {
+                options: ['success', 'info', 'warning', 'error'],
+                control: 'select'
+            }
+        }}
+        args={{
+            title: 'Test Alert',
+            message: 'This is a test message to demonstrate a page alert',
+            status: 'success'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
 
 # Page Alerts (TBD)
+
+<PageAlert title="Test Alert" message="This is a test message to demonstrate a page alert" status="success" />
 
 ### When to use this component
 
