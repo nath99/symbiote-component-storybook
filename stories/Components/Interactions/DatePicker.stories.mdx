@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { DatePicker } from '@symbiotetech/symbiote-component-library';
+
+<Meta title="Components/Interactions/DatePicker" component={DatePicker} />
+
+# DatePicker
+<div class="col-12 col-md-3">
+    <DatePicker
+        type="date"
+        label="Date"
+        id="datepicker-1"
+        className="datepicker-class">
+    </DatePicker>
+</div>
+<br/>
+<div class="col-12 col-md-3">
+    <DatePicker
+        type="range"
+        label="Date Range"
+        id="datepicker-2"
+        className="datepicker-class">
+    </DatePicker>
+</div>
+
+
+The DatePicker component is useful for easily selecting a specific date or a range of days. We have used mymths's VanillaJS Date Picker due to its clean and accessable user interface as well as its wide range of configuration options. The full documentation can be found <a href="https://mymth.github.io/vanillajs-datepicker/" target="_blank" rel="noopener noreferrer">here</a>. It is released under an MIT licence and can therefore be used for most commercial and non-commercial projects.
+
+### When to use this component
+
+This component should be used when users need to input a date or date-range and will benefit from the context of a calendar.
+
+### Options
+
+The following optional items can be supplied to the DatePicker component.
+
+- **Type** - The main setting for either picking a specific date or a range between two dates
+- **Label** - A label/title that can be assigned to either a date or date range picker
+- **ID** - A parameter for setting the id for the rendered DatePicker component
+- **Classname** - A parameter for setting the classname for the rendered DatePicker component
+
+### Snippets
+
+#### HTML
+```html
+<label for="datepicker-1">Date</label>
+<input type="text" class="date-picker datepicker-class datepicker-input" id="datepicker-1">
+
+<div id="datepicker-2" class="date-range-picker datepicker-class">
+    <label for="datepicker-2">Date Range</label>
+    <input class="from-date datepicker-input" type="text" name="start">
+    <span>to</span>
+    <input class="to-date datepicker-input" type="text" name="end">
+</div>
+```
+
+#### React
+```jsx
+<DatePicker
+    type="date"
+    label="Date"
+    id="datepicker-1"
+    className="datepicker-class">
+</DatePicker>
+
+<DatePicker
+    type="range"
+    label="Date Range"
+    id="datepicker-2"
+    className="datepicker-class">
+</DatePicker>
+```
