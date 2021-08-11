@@ -18,7 +18,6 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.2",
     "@storybook/theming": "^6.3.5",
-    "@symbiotetech/symbiote-component-library": "^1.0.3",
     "@types/react": "^17.0.13",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
@@ -30,5 +29,8 @@
     "sass": "^1.35.2",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0"
+  },
+  "dependencies": {
+    "@symbiotetech/symbiote-component-library": "^1.0.4"
   }
 }
