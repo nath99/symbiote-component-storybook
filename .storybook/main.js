@@ -46,7 +46,7 @@ module.exports = {
 
     // Post emit plugin which fixes paths to static media files and iframe.htm when doing build
     config.plugins.push(new HookShellScriptPlugin({
-      afterEmit: ['sed -i -e "s#static/media/#.storybook/static/media/#g;s#iframe.html#.storybook/iframe.html#g" storybook-static/main.4f3f9c96450c4fd9e74b.manager.bundle.js']
+      afterEmit: ['sed -i -e "s#static/media/#.storybook/static/media/#g;s#iframe.html#.storybook/iframe.html#g" storybook-static/main.*.manager.bundle.js']
     }))
 
     config.resolve.extensions.push(".ts", ".tsx");
