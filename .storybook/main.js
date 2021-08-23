@@ -8,7 +8,7 @@ const HookShellScriptPlugin = require('hook-shell-script-webpack-plugin');
  */
 function disableChunkSplitting(config) {
   config.optimization = { splitChunks: { chunks: 'async' } };
-  config.output = { ...config.output, chunkFilename: '[chunkhash].chunk.js', };
+  config.output = { ...config.output, filename: '[name]-[id].js', };
   config.plugins.push(new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1, }));
 
   return config;
@@ -46,7 +46,7 @@ module.exports = {
 
     // Post emit plugin which fixes paths to static media files and iframe.htm when doing build
     config.plugins.push(new HookShellScriptPlugin({
-      afterEmit: ['sed -i -e "s#static/media/#.storybook/static/media/#g;s#iframe.html#.storybook/iframe.html#g" storybook-static/main.*.manager.bundle.js']
+      afterEmit: ['sed -i -e "s#static/media/#.storybook/static/media/#g;s#iframe.html#.storybook/iframe.html#g" storybook-static/main-3.js']
     }))
 
     config.resolve.extensions.push(".ts", ".tsx");
