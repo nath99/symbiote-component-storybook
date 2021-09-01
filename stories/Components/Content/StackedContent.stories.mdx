@@ -26,6 +26,27 @@ The following optional items can be supplied to the Carousel component.
 
 ### Examples
 
+Two populated content boxes
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701"]}
+    foregroundColors={["inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box</h2>
+            <p>Here is some body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the second content box</h2>
+            <p>Also, here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+Three populated content boxes
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -50,6 +71,7 @@ The following optional items can be supplied to the Carousel component.
 >
 </StackedContent>
 
+One unpopulated content box and one populated content box
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701"]}
@@ -65,6 +87,7 @@ The following optional items can be supplied to the Carousel component.
 >
 </StackedContent>
 
+One unpopulated content box followed by a populated box and then an unpopulated content box
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -81,6 +104,7 @@ The following optional items can be supplied to the Carousel component.
 >
 </StackedContent>
 
+Two unpopulated content boxes followed by a populated box
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -97,6 +121,7 @@ The following optional items can be supplied to the Carousel component.
 >
 </StackedContent>
 
+One populated content box followed by two unpopulated box
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -115,39 +140,29 @@ The following optional items can be supplied to the Carousel component.
 
 ### Snippets
 
-#### HTML
-```html
-<div class="stacked-content my-stacked-content">
-    <div class="content-box box-1 col-12 col-md-10" style="background: rgb(131, 94, 217);">
-        <div class="col-12 col-md-7 col-lg-5 inverted">
-            <div>
-                <h2>I'm a heading in the first content box</h2>
-                <p>Here is some body text in the first content box.</p>
-                <button data-testid="button" class="button primary sm undefined">Click me!</button>
-            </div>
+Two populated content boxes
+```jsx
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701"]}
+    foregroundColors={["inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box</h2>
+            <p>Here is some body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the second content box</h2>
+            <p>Also, here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
         </div>
-    </div>
-    <div class="content-box box-2 col-12 col-md-6 offset-md-6 col-lg-7 offset-lg-5" style="background: rgb(193, 87, 1);">
-        <div class="col-12 col-lg-10 inverted">
-            <div>
-                <h2>I'm a heading in the second content box</h2>
-                <p>Also, here is some more body text in the second content box.</p>
-                <button data-testid="button" class="button primary sm undefined">Click me!</button>
-            </div>
-        </div>
-    </div>
-    <div class="content-box box-3 col-12 col-md-6 offset-md-1 col-lg-7 offset-lg-2" style="background: rgb(217, 54, 54);">
-        <div class="col-12 col-lg-10 inverted">
-            <div>
-                <h2>I'm a heading in the third content box</h2>
-                <p>finally, here is some more body text in the third content box.</p>
-                <button data-testid="button" class="button primary sm undefined">Click me!</button>
-            </div>
-        </div>
-    </div>
-</div>
+    ]}
+>
+</StackedContent>
 ```
-#### React
+
+Three populated content boxes
 ```jsx
 <StackedContent
     className="my-stacked-content"
@@ -172,7 +187,10 @@ The following optional items can be supplied to the Carousel component.
     ]}
 >
 </StackedContent>
+```
 
+One unpopulated content box and one populated content box
+```jsx
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701"]}
@@ -187,7 +205,10 @@ The following optional items can be supplied to the Carousel component.
     ]}
 >
 </StackedContent>
+```
 
+One unpopulated content box followed by a populated box and then an unpopulated content box
+```jsx
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -203,7 +224,10 @@ The following optional items can be supplied to the Carousel component.
     ]}
 >
 </StackedContent>
+```
 
+Two unpopulated content boxes followed by a populated box
+```jsx
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -219,7 +243,12 @@ The following optional items can be supplied to the Carousel component.
     ]}
 >
 </StackedContent>
+```
 
+
+One populated content box followed by two unpopulated box
+
+```jsx
 <StackedContent
     className="my-stacked-content"
     backgroundColors={["#835ED9", "#C15701", "#D93636"]}
@@ -236,4 +265,3 @@ The following optional items can be supplied to the Carousel component.
 >
 </StackedContent>
 ```
-
