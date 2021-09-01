@@ -32,6 +32,6 @@
     "style-loader": "^2.0.0"
   },
   "dependencies": {
-    "@symbiotetech/symbiote-component-library": "^1.0.4"
+    "@symbiotetech/symbiote-component-library": "link:../symbiote-component-library"
   }
 }

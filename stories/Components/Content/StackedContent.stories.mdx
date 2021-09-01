@@ -1,0 +1,239 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { StackedContent, Button } from '@symbiotetech/symbiote-component-library';
+
+<Meta title="Components/Content/Stacked Content" component={StackedContent}/>
+
+# Stacked Content
+
+The Stacked Content component is a layout of content boxes with the aim to promote visual hierachy. It places content in seperate stacked boxes that arrange themselves dynamically depending on which content boxes are populated. Content boxes can contain any form of JSX/HTML or can be empty. Empty content boxes become colapsed and covered by subsquent content boxes providing great flexibility and a high degree of customisation.
+
+### When to use this component
+
+The Stacked Content component should be used when visual hierachy is important such as when a specific reading order is required.
+
+### When not to use this component
+
+Use this item sparingly as it the asserted viusal hierachy can be lost of multiple Stacked Content components are used near each other on a page.
+
+### Options
+
+The following optional items can be supplied to the Carousel component.
+
+- **Class name** - A custom CSS class that can be given to the parent container for styling/identification purposes.
+- **Background Colors** - An array of hexadecimal colors that are applied to each of the content box in order.
+- **Foreground Colors** - An array of either "normal" or  "inverted" strings that affect the content within each of the content boxes in order.
+- **Content** - An array of JSX/HTML snippets that should render in each of the content boxes in order. Undefined can also be used within the array to indicate an empty content box.
+
+### Examples
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box</h2>
+            <p>Here is some body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the second content box</h2>
+            <p>Also, here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the third content box</h2>
+            <p>finally, here is some more body text in the third content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701"]}
+    foregroundColors={["inverted", "inverted"]}
+    content={[
+        undefined,
+        <div>
+            <h2>I'm a heading in the second content box and the first box is empty</h2>
+            <p>Here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        undefined,
+        <div>
+            <h2>I'm a heading in the second content box and both the first and third boxes are empty</h2>
+            <p>Here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        undefined
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        undefined,
+        undefined,
+        <div>
+            <h2>I'm a heading in the third content box and both the first and second boxes are empty</h2>
+            <p>Here is some more body text in the third content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box and both the second and third boxes are empty</h2>
+            <p>Here is some more body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        undefined,
+        undefined
+    ]}
+>
+</StackedContent>
+
+### Snippets
+
+#### HTML
+```html
+<div class="stacked-content my-stacked-content">
+    <div class="content-box box-1 col-12 col-md-10" style="background: rgb(131, 94, 217);">
+        <div class="col-12 col-md-7 col-lg-5 inverted">
+            <div>
+                <h2>I'm a heading in the first content box</h2>
+                <p>Here is some body text in the first content box.</p>
+                <button data-testid="button" class="button primary sm undefined">Click me!</button>
+            </div>
+        </div>
+    </div>
+    <div class="content-box box-2 col-12 col-md-6 offset-md-6 col-lg-7 offset-lg-5" style="background: rgb(193, 87, 1);">
+        <div class="col-12 col-lg-10 inverted">
+            <div>
+                <h2>I'm a heading in the second content box</h2>
+                <p>Also, here is some more body text in the second content box.</p>
+                <button data-testid="button" class="button primary sm undefined">Click me!</button>
+            </div>
+        </div>
+    </div>
+    <div class="content-box box-3 col-12 col-md-6 offset-md-1 col-lg-7 offset-lg-2" style="background: rgb(217, 54, 54);">
+        <div class="col-12 col-lg-10 inverted">
+            <div>
+                <h2>I'm a heading in the third content box</h2>
+                <p>finally, here is some more body text in the third content box.</p>
+                <button data-testid="button" class="button primary sm undefined">Click me!</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+#### React
+```jsx
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box</h2>
+            <p>Here is some body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the second content box</h2>
+            <p>Also, here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        <div>
+            <h2>I'm a heading in the third content box</h2>
+            <p>finally, here is some more body text in the third content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701"]}
+    foregroundColors={["inverted", "inverted"]}
+    content={[
+        undefined,
+        <div>
+            <h2>I'm a heading in the second content box and the first box is empty</h2>
+            <p>Here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        undefined,
+        <div>
+            <h2>I'm a heading in the second content box and both the first and third boxes are empty</h2>
+            <p>Here is some more body text in the second content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        undefined
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        undefined,
+        undefined,
+        <div>
+            <h2>I'm a heading in the third content box and both the first and second boxes are empty</h2>
+            <p>Here is some more body text in the third content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>
+    ]}
+>
+</StackedContent>
+
+<StackedContent
+    className="my-stacked-content"
+    backgroundColors={["#835ED9", "#C15701", "#D93636"]}
+    foregroundColors={["inverted", "inverted", "inverted"]}
+    content={[
+        <div>
+            <h2>I'm a heading in the first content box and both the second and third boxes are empty</h2>
+            <p>Here is some more body text in the first content box.</p>
+            <Button type="primary" size="sm">Click me!</Button>
+        </div>,
+        undefined,
+        undefined
+    ]}
+>
+</StackedContent>
+```
+

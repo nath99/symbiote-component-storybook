@@ -2301,12 +2301,9 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
-"@symbiotetech/symbiote-component-library@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@symbiotetech/symbiote-component-library/-/symbiote-component-library-1.0.4.tgz#2c84289b7d41ebecbbe661724c2772b4f1f0a90a"
-  integrity sha512-ugUXsZamWeeAspJUREjPd+wkAsxM0UG9Nm9bkSigpE4eJlX9/L26i+Zc/Y9itB1kKV6VxvggBnMuyvteQCp7DA==
-  dependencies:
-    line-awesome "^1.3.0"
+"@symbiotetech/symbiote-component-library@link:../symbiote-component-library":
+  version "0.0.0"
+  uid ""
 
 "@types/braces@*":
   version "3.0.1"
