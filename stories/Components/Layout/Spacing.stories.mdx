@@ -1,5 +1,45 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
+import { Separator } from '@symbiotetech/symbiote-component-library';
+
 <Meta title="Components/Layout/Spacing" />
 
 # Spacing
+
+Our spacing
+
+## Separator component
+
+Our separator component provides an easy way to add vertical space between elements.
+
+<div className="container grid-demo">
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+    <Separator size={4} />
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
+
+```jsx
+<div className="container grid-demo">
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+    <Separator size={4} />
+    <div className="row">
+        <div className="col-12"><p className="inverted">12</p></div>
+    </div>
+</div>
+```
+
+<Spacer size={1} />
+
+### When to use this component
+
+Use this to add space between elements
+
+### Wen not to use this component
+
+Dont use this component for

@@ -5,7 +5,7 @@ export const parameters = {
           'Design System', ['Introduction', 'Philosophy', 'Components', 'Styles', 'Getting Started'],
           'Components', [
             'Foundations', ['Color', 'Typography', 'Icons'],
-            'Layout', ['Grid', 'Spacing'],
+            'Layout', ['Grid', 'Spacing', 'Utlity Classes'],
             'Navigation', ['Main Navigation', 'Side Navigation', 'Breadcrumbs', 'Footer'],
             'Interactions', ['Buttons', 'Toggle', 'Checkbox', 'Inputs', 'Radio', 'Select', 'Slider', 'DatePicker'],
             'Alerts', ['Notification', 'Page alert'],
